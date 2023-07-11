@@ -1,4 +1,8 @@
+import React from 'react'
 import { Navigate } from 'react-router-dom'
+import BaseLayout from './Layouts/BaseLayout'
+
+// Layouts
 
 const routes = [
   {

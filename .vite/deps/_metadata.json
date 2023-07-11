@@ -1,44 +1,53 @@
 {
   "hash": "e6e1e1b4",
-  "browserHash": "4d8f9333",
+  "browserHash": "880fcdca",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "2d204615",
+      "fileHash": "000090b8",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "e7330b03",
+      "fileHash": "b2d95050",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "e3c77dfe",
+      "fileHash": "d4520203",
       "needsInterop": false
     },
     "@mui/material": {
       "src": "../../node_modules/@mui/material/index.js",
       "file": "@mui_material.js",
-      "fileHash": "1a278047",
+      "fileHash": "44aa88b5",
       "needsInterop": false
     },
     "react-router": {
       "src": "../../node_modules/react-router/dist/index.js",
       "file": "react-router.js",
-      "fileHash": "725a71b0",
+      "fileHash": "7490ea1a",
+      "needsInterop": false
+    },
+    "@mui/material/": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material_.js",
+      "fileHash": "76a21326",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-7MXD6AJL": {
-      "file": "chunk-7MXD6AJL.js"
+    "chunk-RTG24K43": {
+      "file": "chunk-RTG24K43.js"
     },
     "chunk-X6XVNPPU": {
       "file": "chunk-X6XVNPPU.js"
+    },
+    "chunk-7MXD6AJL": {
+      "file": "chunk-7MXD6AJL.js"
     },
     "chunk-BHZAVQOK": {
       "file": "chunk-BHZAVQOK.js"
