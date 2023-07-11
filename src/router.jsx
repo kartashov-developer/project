@@ -1,23 +1,22 @@
 import React from 'react'
 import { Navigate } from 'react-router-dom'
-import BaseLayout from './Layouts/BaseLayout'
-
 // Layouts
+import BaseLayout from './Layouts/BaseLayout'
 
 const routes = [
   {
     path: '',
     element: <BaseLayout />,
-    children: [
-        {
-            path: '/',
-            element: <Overview />
-        },
-        {
-            path: 'overview',
-            element: <Navigate to='/' replace />
-        },
-    ]
+    // children: [
+    //   {
+    //     path: '',
+    //     element: <Navigate to="welcome" replace />
+    //   },
+    //   {
+    //     path: 'welcome',
+    //     element: <Welcome />
+    //   },
+    // ]
   },
 ]
 

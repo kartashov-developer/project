@@ -50,9 +50,9 @@ import {
   useRouteId,
   useRouteLoaderData,
   useRoutes,
-  useRoutesImpl
-} from "./chunk-7MXD6AJL.js";
-import "./chunk-BHZAVQOK.js";
+  useRoutesImpl,
+} from './chunk-7MXD6AJL.js'
+import './chunk-BHZAVQOK.js'
 export {
   AbortedDeferredError,
   Await,
@@ -106,6 +106,6 @@ export {
   useRevalidator,
   useRouteError,
   useRouteLoaderData,
-  useRoutes
-};
+  useRoutes,
+}
 //# sourceMappingURL=react-router.js.map
