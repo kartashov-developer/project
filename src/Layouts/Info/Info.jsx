@@ -14,16 +14,16 @@ const ContainerWrapper = styled(Container)(
 
 export default function Info() {
   return (
-    <ContainerWrapper disableGutters>
-      <Box sx={{ display: 'flex', gap: '33px' }}>
-        <Link>Chat with us</Link>
+    <ContainerWrapper maxWidth='lg' disableGutters>
+      <Box sx={{ display: 'flex', gap: '33px', alignItems: 'center' }}>
+        <Link href="#">Chat with us</Link>
         <Typography variant="subtitle1">+420 336 775 664</Typography>
         <Typography variant="subtitle1">info@freshnesecom.com</Typography>
       </Box>
       <Box sx={{ display: 'flex', gap: '38px' }}>
-        <Link>Blog</Link>
-        <Link>About Us</Link>
-        <Link>Careers</Link>
+        <Link href="#">Blog</Link>
+        <Link href="#">About Us</Link>
+        <Link href="#">Careers</Link>
       </Box>
     </ContainerWrapper>
   )

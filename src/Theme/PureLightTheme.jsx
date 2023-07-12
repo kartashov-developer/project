@@ -54,12 +54,58 @@ const colors = {
 }
 
 export const PureLightTheme = createTheme({
+  palette: {
+    primary: {
+      darker: '#46760A',
+      main: '#6A983C',
+      light: '#92C064',
+      lighter: '#C8DEB3',
+      lightest: '#F4F8EC',
+    },
+    secondary: {
+      darker: '#575757',
+      main: '#151515',
+      light: '#A9A9A9',
+      lighter: '#D1D1D1',
+      lightest: '#EBEBEB'
+    },
+    success: {
+      lighter: alpha(themeColors.success, 0.1),
+      light: lighten(themeColors.success, 0.3),
+      main: themeColors.success,
+      dark: darken(themeColors.success, 0.2),
+    },
+    warning: {
+      darker: '#E5704B',
+      main: '#C7522D',
+      light: '#EB8D70',
+      lighter: '#F7C6B7',
+      lightest: '#FFF1ED',
+    },
+    error: {
+      lighter: alpha(themeColors.error, 0.1),
+      light: lighten(themeColors.error, 0.3),
+      main: themeColors.error,
+      dark: darken(themeColors.error, 0.2),
+    },
+    info: {
+      lighter: alpha(themeColors.info, 0.1),
+      light: lighten(themeColors.info, 0.3),
+      main: themeColors.info,
+      dark: darken(themeColors.info, 0.2),
+    },
+    grey: {
+      100: '#F9F9F9',
+      400: '#D1D1D1'
+    }
+  },
   breakpoints: {
     values: {
       xs: 0,
-      sm: 600,
+      sm: 660,
       md: 960,
-      lg: 1280,
+      breakpoint: 1170,
+      lg: 1260,
       xl: 1840,
     },
   },
@@ -94,6 +140,44 @@ export const PureLightTheme = createTheme({
           WebkitFontSmoothing: 'antialiased',
         },
       },
+    },
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          padding: '0px',
+        },
+        input: {
+          padding: '0px',
+        },
+      }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        input: {
+          height: '19px',
+          fontSize: '14px',
+        },
+      }
+    },
+    MuiBadge: {
+      styleOverrides: {
+        root: {
+          // color: colors.warning.main
+        },
+        badge: {
+          backgroundColor: colors.warning.main,
+          color: themeColors.white,
+          fontSize: '12px',
+          borderRadius: '12px',
+          width: '16px',
+          boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.15)',
+          cursor: 'pointer',
+
+          '&:hover': {
+            backgroundColor: lighten(colors.warning.main, 0.15)
+          }
+        }
+      }
     },
     MuiLink: {
       styleOverrides: {
