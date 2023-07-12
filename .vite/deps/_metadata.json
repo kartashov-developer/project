@@ -1,0 +1,86 @@
+{
+  "hash": "e6e1e1b4",
+  "browserHash": "698f8d03",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d2dcc41e",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "027c874e",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "a875c3d6",
+      "needsInterop": false
+    },
+    "@mui/material": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material.js",
+      "fileHash": "e9380d4c",
+      "needsInterop": false
+    },
+    "react-router": {
+      "src": "../../node_modules/react-router/dist/index.js",
+      "file": "react-router.js",
+      "fileHash": "85779a0b",
+      "needsInterop": false
+    },
+    "@mui/material/": {
+      "src": "../../node_modules/@mui/material/index.js",
+      "file": "@mui_material_.js",
+      "fileHash": "1032a75c",
+      "needsInterop": false
+    },
+    "@mui/material/styles": {
+      "src": "../../node_modules/@mui/material/styles/index.js",
+      "file": "@mui_material_styles.js",
+      "fileHash": "12b1c044",
+      "needsInterop": false
+    },
+    "@mui/system": {
+      "src": "../../node_modules/@mui/system/esm/index.js",
+      "file": "@mui_system.js",
+      "fileHash": "b292291b",
+      "needsInterop": false
+    },
+    "@mui/icons-material": {
+      "src": "../../node_modules/@mui/icons-material/esm/index.js",
+      "file": "@mui_icons-material.js",
+      "fileHash": "80feb6ac",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-VCUFSQ3T": {
+      "file": "chunk-VCUFSQ3T.js"
+    },
+    "chunk-CCXTVNQN": {
+      "file": "chunk-CCXTVNQN.js"
+    },
+    "chunk-56GVTELP": {
+      "file": "chunk-56GVTELP.js"
+    },
+    "chunk-UWD2ZMPN": {
+      "file": "chunk-UWD2ZMPN.js"
+    },
+    "chunk-X6XVNPPU": {
+      "file": "chunk-X6XVNPPU.js"
+    },
+    "chunk-7MXD6AJL": {
+      "file": "chunk-7MXD6AJL.js"
+    },
+    "chunk-AYRRELQF": {
+      "file": "chunk-AYRRELQF.js"
+    },
+    "chunk-BHZAVQOK": {
+      "file": "chunk-BHZAVQOK.js"
+    }
+  }
+}
