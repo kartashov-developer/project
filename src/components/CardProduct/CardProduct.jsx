@@ -18,7 +18,7 @@ const CardProduct = () => {
           component="img"
           height="180px"
           width="269px"
-          image="../../../public/static/images/placeholders/Image-light.jpg"
+          image="/static/images/placeholders/Image-light.jpg"
           alt="Card Content"
           sx={{ padding: '16px 16px 16px 16px' }}
         />
