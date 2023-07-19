@@ -48,5 +48,30 @@ export const categoryMenu = [
     id: 10,
     categoryName: 'Baby',
     menu: 'block2'
+  },
+  {
+    id: 11,
+    categoryName: 'Carrots',
+    menu: 'block3'
+  },
+  {
+    id: 12,
+    categoryName: 'Tomatoes',
+    menu: 'block3'
+  },
+  {
+    id: 13,
+    categoryName: 'Potatoes',
+    menu: 'block3'
+  },
+  {
+    id: 14,
+    categoryName: 'Chicken',
+    menu: 'block3'
+  },
+  {
+    id: 15,
+    categoryName: 'Pork',
+    menu: 'block3'
   }
 ]
