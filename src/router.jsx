@@ -55,7 +55,7 @@ const routes = [
       {
         path: 'coming-soon',
         element: <StatusComingSoon />
-      }
+      },
       {
         path: '',
         element: <Home />

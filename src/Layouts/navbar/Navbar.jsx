@@ -20,7 +20,7 @@ const CategoriesButton = styled(Button)(
     height: 23px;
     background: ${theme.palette.grey[100]};
     padding: 0;
-    font-size: 15px;
+    font-size: 15px;i
     font-weight: 500;
     &:hover {
       background-color: ${theme.palette.grey[100]};
