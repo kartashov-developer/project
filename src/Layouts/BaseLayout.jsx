@@ -9,18 +9,18 @@ import Search from './Search/Search'
 import Navbar from './Navbar/Navbar'
 import Line from './Line/Line'
 
-export default function BaseLayout({ children }) {
+export default function BaseLayout() {
   return (
     <>
       {/* Background */}
       <Container
-        maxWidth='100'
+        maxWidth
         disableGutters
         sx={{
           position: 'absolute',
           backgroundColor: '#F9F9F9',
           height: '100%',
-          width: '100%',
+          // width: '100%',
           zIndex: -1000,
         }}></Container>
       {/* Line for Navbar */}
@@ -37,12 +37,10 @@ export default function BaseLayout({ children }) {
           backgroundColor: '#FFFFFF',
           boxShadow: "0px 0px 5px 1px rgba(227, 224, 224, 1)"
         }}>
-        <Container
-          maxWidth='breakpoint'
+        <Container disableGutters
           sx={{
-            height: '100%',
-            margin: '0 auto',
-            boxShadow: 1
+            boxShadow: 1,
+            padding: '0px 45px'
           }}>
           <Info />
           <Search />

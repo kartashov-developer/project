@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom'
 // Layouts
 import BaseLayout from './layouts/BaseLayout'
 
-import Home from './content/pages/Home'
+import Home from './content/pages/Home/Home'
 import Other from './content/pages/Other'
 
 // Status

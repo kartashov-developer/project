@@ -187,6 +187,10 @@ export const PureLightTheme = createTheme({
           textDecorationColor: colors.primary.main,
           textDecoration: 'none',
           cursor: 'pointer',
+          fontFamily: 'Open Sans',
+          fontStyle: 'normal',
+          fontWeight: '400',
+          lineHeight: 'normal',
 
           '&:hover, &.MuiSelected': {
             textDecoration: 'underline',
@@ -206,7 +210,7 @@ export const PureLightTheme = createTheme({
           fontWeight: 'bold',
           textTransform: 'none',
           fontSize: '15px',
-          borderRadius: '12px',
+          borderRadius: '12px'
         },
         endIcon: {
           marginRight: -6,
@@ -218,34 +222,37 @@ export const PureLightTheme = createTheme({
           backgroundColor: 'themeColors.white',
           border: '2px solid ' + colors.primary.light,
           color: themeColors.secondary,
+          borderRadius: '12px',
 
           '&:hover, &.MuiSelected': {
             backgroundColor: colors.primary.lighter,
             border: '2px solid ' + colors.primary.main,
           },
           '&:active': {
-            backgroundColor: colors.primary.light,
-            border: '2px solid ' + darken(colors.primary.darker, 0),
+            backgroundColor: alpha(colors.primary.light, 0.3),
+            border: '2px solid ' + alpha(colors.primary.darker, 0.5),
           },
         },
         containedPrimary: {
           backgroundColor: colors.primary.main,
           color: themeColors.white,
           border: '2px solid ' + colors.primary.darker,
+          borderRadius: '12px',
 
           '&:hover, &.MuiSelected': {
-            backgroundColor: colors.primary.darker,
-            border: '2px solid ' + darken(colors.primary.darker, 0.3),
+            backgroundColor: darken(colors.primary.darker, 0.1),
+            border: '2px solid ' + darken(colors.primary.darker, 0.4),
           },
           '&:active': {
-            backgroundColor: darken(colors.primary.darker, 0.2),
-            border: '2px solid ' + darken(colors.primary.darker, 0.5),
+            backgroundColor: darken(colors.primary.darker, 0.25),
+            border: '2px solid ' + darken(colors.primary.darker, 0.6),
           },
         },
         textPrimary: {
           backgroundColor: '#F5F5F5',
           color: colors.secondary.main,
           border: 'none',
+          borderRadius: '12px',
 
           '&:hover, &.MuiSelected': {
             backgroundColor: colors.secondary.lightest,
@@ -255,7 +262,7 @@ export const PureLightTheme = createTheme({
           },
         },
         sizeSmall: {
-          padding: '12px',
+          padding: '3px 12px',
         },
         sizeMedium: {
           padding: '12px 16px',
@@ -264,6 +271,13 @@ export const PureLightTheme = createTheme({
           padding: '12px 48px',
         },
       },
+    },
+    MuiCardActions: {
+      styleOverrides: {
+        root: {
+          padding: 0
+        }
+      }
     },
     MuiTypography: {
       defaultProps: {
@@ -293,7 +307,7 @@ export const PureLightTheme = createTheme({
   },
   typography: {
     fontFamily:
-      '"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+      '"Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     h1: {
       fontWeight: 700,
       fontSize: 32,
@@ -303,15 +317,15 @@ export const PureLightTheme = createTheme({
       fontSize: 26,
     },
     h3: {
-      fontWeight: 700,
+      fontWeight: 500,
       fontSize: 22,
     },
     h4: {
-      fontWeight: 700,
+      fontWeight: 500,
       fontSize: 18,
     },
     h5: {
-      fontWeight: 700,
+      fontWeight: 500,
       fontSize: 15,
     },
     body1: {
@@ -326,6 +340,7 @@ export const PureLightTheme = createTheme({
     },
     subtitle1: {
       fontSize: 12,
+      fontWeight: 400
     },
   },
   shadows: [

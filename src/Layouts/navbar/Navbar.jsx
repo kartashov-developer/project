@@ -7,10 +7,11 @@ const ContainerWrapper = styled(Container)(
   ({ theme }) => `
     display: flex;
     width: 100%;
-    padding: 16px 0px;
+    padding: 16px 0px 16px 0px;
     flex-direction: column;
     align-items: flex-start;
     gap: 39px;
+    margin-bottom: 0px;
     background-color: ${theme.palette.grey[100]};
   `
 )
