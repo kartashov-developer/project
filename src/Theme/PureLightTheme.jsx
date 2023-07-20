@@ -109,7 +109,7 @@ export const PureLightTheme = createTheme({
       xl: 1840,
     },
   },
-  spacing: 9,
+  spacing: 4,
   components: {
     MuiCssBaseline: {
       styleOverrides: {
@@ -180,6 +180,9 @@ export const PureLightTheme = createTheme({
       }
     },
     MuiLink: {
+      defaultProps: {
+        underline: 'hover'
+      },
       styleOverrides: {
         root: {
           color: colors.primary.main,
@@ -277,6 +280,14 @@ export const PureLightTheme = createTheme({
         root: {
           padding: 0
         }
+      }
+    },
+    MuiAvatar: {
+      styleOverrides: {
+        root: {
+          width: '32px',
+          height: '32px'
+        },
       }
     },
     MuiTypography: {

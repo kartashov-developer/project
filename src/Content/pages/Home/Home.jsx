@@ -7,6 +7,8 @@ import { Container } from '@mui/material'
 import BlockMenuBanners from './BlockMenuBanners/BlockMenuBanners'
 import GoodsBlock from './GoodsBlock/GoodsBlock'
 import SecondGoodsBlock from './SecondGoodsBlock/SecondGoodsBlock'
+import CommentSection from './CommentSection/CommentSection'
+import BlogPosts from './BlogPosts/BlogPosts'
 //----------------------------------------------------------------------------
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
       <BlockMenuBanners />
       <GoodsBlock />
       <SecondGoodsBlock />
+      <CommentSection />
+      <BlogPosts />
     </Container>
   )
 }

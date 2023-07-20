@@ -7,7 +7,7 @@ const SideMenu = ({ titleText, buttonText, children }) => {
   return (
     <Box sx={{ width: '269px', height: '282px' }}>
 
-      <Typography variant='h4' mb={'16px'}>{titleText}</Typography>
+      <Typography variant='h4' mb={'16px'} fontWeight={'600'}>{titleText}</Typography>
 
       <Stack sx={{
         display: 'flex',

@@ -18,9 +18,11 @@ const SecondGoodsBlock = () => {
           <CategoryLink key={category.id} linkName={category.categoryName} />
         ))}
       </SideMenu>
-      <CardProduct />
-      <CardProduct />
-      <CardProduct />
+      <CardProduct
+        productTitle='Hello' productDescription='Atque doloremque praesentium ab aspernatur similique amet.' productPrice='12.32'
+      />
+      <CardProduct productTitle='Hello' productDescription='Atque doloremque praesentium ab aspernatur similique amet.' productPrice='12.32' />
+      <CardProduct productTitle='Hello' productDescription='Atque doloremque praesentium ab aspernatur similique amet.' productPrice='12.32' />
     </Block>
   )
 }
