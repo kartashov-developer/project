@@ -1,8 +1,9 @@
-import { Container, Stack, Typography, styled } from '@mui/material'
 import React from 'react'
-import CategoryLink from '../../components/CategoryLink/CategoryLink'
+import { Box, Container, Stack, Typography, styled } from '@mui/material'
 import { footerMenu } from '../../db/footerMenu'
 import { Link } from 'react-router-dom'
+import TagGrey from '../../components/TagGrey/TagGrey'
+import { tags } from '../../db/tags'
 // ---------------------------------------------------------------------------
 const WrappedContainer = styled(Container)(({ theme }) => ({
   display: 'flex',
@@ -58,8 +59,28 @@ const Footer = () => {
           </StackColumn>
         ))}
       </WrappedContainer>
-      <Container disableGutters>
+      <Container disableGutters sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px'
+      }}>
         <Typography variant='h4' fontWeight={'600'}>Product tags</Typography>
+        <Container disableGutters maxWidth
+          sx={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignContent: 'center',
+            gap: '16px'
+          }}
+        >
+          {tags.map((tag) => (
+            <TagGrey
+              key={tag}
+            >
+              {tag}
+            </TagGrey>
+          ))}
+        </Container>
       </Container>
     </Container>
   )
