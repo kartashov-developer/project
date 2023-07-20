@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Link, styled } from '@mui/material'
+import { Link as LinkRouter } from 'react-router-dom'
 //----------------------------------------------------------------------------
 
 const StyledCategoryLink = styled(Link)({
@@ -10,9 +11,11 @@ const StyledCategoryLink = styled(Link)({
   textDecorationThickness: '0.5px'
 })
 
-const CategoryLink = ({ linkName }) => {
+const CategoryLink = ({ linkUrl, children }) => {
   return (
-    <StyledCategoryLink>{linkName}</StyledCategoryLink>
+    <StyledCategoryLink component={LinkRouter} to={linkUrl}>
+      {children}
+    </StyledCategoryLink>
   )
 }
 

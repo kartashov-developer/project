@@ -15,7 +15,9 @@ const SecondGoodsBlock = () => {
     <Block>
       <SideMenu titleText={'Best from Farmers'} buttonText={'More products'}>
         {filteredBlockMenuCategories2.map((category) => (
-          <CategoryLink key={category.id} linkName={category.categoryName} />
+          <CategoryLink key={category.id} linkUrl={'/404'}>
+            {category.categoryName}
+          </CategoryLink>
         ))}
       </SideMenu>
       <CardProduct

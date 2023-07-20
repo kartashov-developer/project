@@ -17,7 +17,9 @@ const CategoryMenu = () => {
       <Block>
         <SideMenu buttonText={'More categories'} titleText={'Category Menu'}>
           {filteredBlockMenuCategories.map((category) => (
-            <CategoryLink key={category.id} linkName={category.categoryName} />
+            <CategoryLink key={category.id} linkUrl={'/404'}>
+              {category.categoryName}
+            </CategoryLink>
           ))}
         </SideMenu>
         <Banner />

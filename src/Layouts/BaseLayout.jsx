@@ -8,6 +8,7 @@ import Info from './Info/Info'
 import Search from './Search/Search'
 import Navbar from './Navbar/Navbar'
 import Line from './Line/Line'
+import Footer from './Footer/Footer'
 
 export default function BaseLayout() {
   return (
@@ -46,6 +47,7 @@ export default function BaseLayout() {
           <Search />
           <Navbar />
           <Outlet />
+          <Footer />
         </Container>
       </Container>
 
