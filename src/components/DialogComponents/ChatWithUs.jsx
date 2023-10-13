@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 import {
   Dialog,
@@ -10,14 +10,20 @@ import {
   Link,
   InputAdornment,
   Button
-} from '@mui/material'
+} from '@mui/material';
+// MUI Icons
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ThumbUpAltTwoToneIcon from '@mui/icons-material/ThumbUpAltTwoTone';
+import ErrorIcon from '@mui/icons-material/Error';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 
 const ChatWithUs = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [submittingDialog, setSubmittingDialog] = useState(false);
   const [successDialog, setSuccessDialog] = useState(false);
+  const [emailAddress, setEmailAddress] = useState('');
+  const [information, setInformation] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleClickOpen = () => {
     setOpenDialog(true);
@@ -28,6 +34,11 @@ const ChatWithUs = () => {
   };
 
   const handleSubmit = () => {
+    if (emailAddress === '' || information === '') {
+      setErrorMessage('Please fill in all fields');
+      return;
+    }
+
     setOpenDialog(false); // Close the first dialog
     setSubmittingDialog(true); // Open the submitting dialog
 
@@ -39,29 +50,10 @@ const ChatWithUs = () => {
         setSuccessDialog(false); // Close the success dialog after 2 seconds
       }, 2000);
     }, 1000);
+    setEmailAddress('');
+    setInformation('');
+    setErrorMessage('');
   };
-
-  // const ButtonClose = () => {
-  //   const [open, setOpen] = useState(true);
-
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setOpen(false);
-  //     }, 2000);
-
-  //     return () => {
-  //       clearTimeout(timer);
-  //     };
-  //   }, []);
-
-  //   return (
-  //     <Dialog open={open} onClose={handleMessageDialogClose}>
-  //       <DialogContent>
-  //         <DialogContentText>We submitted your message!</DialogContentText>
-  //       </DialogContent>
-  //     </Dialog>
-  //   );
-  // };
 
   return (
     <>
@@ -70,27 +62,30 @@ const ChatWithUs = () => {
         <DialogTitle color='primary'>Chat with us</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To chat with us, please fill in the form below and we will answer you.
+            To chat with us, please fill the form below and we will answer
+            you.
           </DialogContentText>
           <TextField
             autoFocus
-            label="Email Adress"
-            type="email"
+            label='Email Adress'
+            type='email'
             InputProps={{
               startAdornment: (
-                <InputAdornment position="start">
-                  <AlternateEmailIcon color="primary" />
+                <InputAdornment position='start'>
+                  <AlternateEmailIcon color='primary' />
                 </InputAdornment>
-              ),
+              )
             }}
-            variant="outlined"
+            variant='outlined'
             fullWidth
             sx={{ mt: 6 }}
+            value={emailAddress}
+            onChange={(e) => setEmailAddress(e.target.value)}
           />
           <TextField
             autoFocus
-            label="Information"
-            type="text"
+            label='Information'
+            type='text'
             fullWidth
             sx={{
               marginTop: 4
@@ -98,14 +93,27 @@ const ChatWithUs = () => {
             minRows={4}
             maxRows={10}
             multiline
+            value={information}
+            onChange={(e) => setInformation(e.target.value)}
           />
           <DialogContentText
             sx={{
-              pt: 1.5
+              pt: 1.5,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '5px',
+              color: '#666666'
             }}
           >
-            *You need to wait 2-3 days.
+            <QuestionAnswerIcon fontSize='small' />
+            You need to wait 2-3 days.
           </DialogContentText>
+          {errorMessage && (
+            <DialogContentText sx={{ pt: 2, display: 'flex', alignItems: 'center', gap: '5px', color: 'red' }}>
+              <ErrorIcon fontSize="small" />
+              {errorMessage}
+            </DialogContentText>
+          )}
           <DialogActions>
             <Button
               variant='text'
@@ -116,31 +124,32 @@ const ChatWithUs = () => {
             >
               Submit
             </Button>
-
           </DialogActions>
         </DialogContent>
-      </Dialog>
+      </Dialog >
       <Dialog open={submittingDialog} onClose={handleClose}>
         <DialogContent>
           <DialogContentText>Submitting...</DialogContentText>
         </DialogContent>
-      </Dialog >
+      </Dialog>
       <Dialog open={successDialog} onClose={handleClose}>
         <DialogContent>
-          <DialogContentText sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 3,
-            fontSize: '20px',
-            color: 'green'
-          }}>
+          <DialogContentText
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 3,
+              fontSize: '20px',
+              color: 'green'
+            }}
+          >
             <ThumbUpAltTwoToneIcon />
-            All is good!
+            Message submitted!
           </DialogContentText>
         </DialogContent>
       </Dialog>
     </>
-  )
-}
+  );
+};
 
-export default ChatWithUs
+export default ChatWithUs;

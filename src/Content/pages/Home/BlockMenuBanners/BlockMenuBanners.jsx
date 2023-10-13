@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import Block from '../../../../components/Block/Block'
-import SideMenu from '../../../../components/SideMenu/SideMenu'
-import CategoryLink from '../../../../components/CategoryLink/CategoryLink'
-import { categoryMenu } from '../../../../db/categoryMenu'
-import Banner from '../../../../components/Banner/Banner'
+import Block from '../../../../components/Block/Block';
+import SideMenu from '../../../../components/SideMenu/SideMenu';
+import CategoryLink from '../../../../components/CategoryLink/CategoryLink';
+import { categoryMenu } from '../../../../db/categoryMenu';
+import Banner from '../../../../components/Banner/Banner';
 //----------------------------------------------------------------------------
 const CategoryMenu = () => {
   // Filter the category menu. I need menu: 'block1'.
   const filteredBlockMenuCategories = categoryMenu.filter(
     (category) => category.menu === 'block1'
-  )
+  );
 
   return (
     <>
@@ -26,7 +26,7 @@ const CategoryMenu = () => {
         <Banner />
       </Block>
     </>
-  )
-}
+  );
+};
 
-export default CategoryMenu
+export default CategoryMenu;

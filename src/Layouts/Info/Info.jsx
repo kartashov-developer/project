@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // MUI
-import { Link, Typography, Container, Box } from '@mui/material'
-import { styled } from '@mui/material/styles'
+import { Link, Typography, Container, Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
-import ChatWithUs from '../../components/DialogComponents/ChatWithUs'
+import ChatWithUs from '../../components/DialogComponents/ChatWithUs';
 
 const ContainerWrapper = styled(Container)(
   () => `
@@ -11,25 +11,43 @@ const ContainerWrapper = styled(Container)(
     align-items: center;
     justify-content: space-between;
     padding: 15px 0px;
-  `,
-)
+  `
+);
 
 export default function Info() {
-
-
   return (
     <ContainerWrapper maxWidth='lg' disableGutters>
+      {/* Left Side */}
       <Box sx={{ display: 'flex', gap: '33px', alignItems: 'center' }}>
-        {/* <Link href="#">Chat with us</Link> */}
+        {/* Dialog */}
         <ChatWithUs />
-        <Typography variant="subtitle1">+420 336 775 664</Typography>
-        <Typography variant="subtitle1">info@freshnesecom.com</Typography>
+        {/* Phone */}
+        <Link
+          variant='subtitle1'
+          href="tel:+420336775664"
+          sx={{
+            color: "#202020"
+          }}
+        >
+          +420 336 775 664
+        </Link>
+        {/* Email */}
+        <Link
+          variant='subtitle1'
+          href="mailto:example@example.com"
+          sx={{
+            color: "#202020"
+          }}
+        >
+          info@freshnesecom.com
+        </Link>
       </Box>
+      {/* Right Side */}
       <Box sx={{ display: 'flex', gap: '38px' }}>
-        <Link href="#">Blog</Link>
-        <Link href="#">About Us</Link>
-        <Link href="#">Careers</Link>
+        <Link href='#'>Blog</Link>
+        <Link href='#'>About Us</Link>
+        <Link href='#'>Careers</Link>
       </Box>
     </ContainerWrapper>
-  )
+  );
 }

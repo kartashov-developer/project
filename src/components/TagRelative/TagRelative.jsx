@@ -1,6 +1,6 @@
-import { Box, Button, Typography, styled } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Box, Button, Typography, styled } from '@mui/material';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TagBox = styled(Box)(
   ({ theme }) => `
@@ -20,13 +20,11 @@ const TagBox = styled(Box)(
       color: ${theme.palette.primary.darker};;
     }
   `
-)
+);
 
 const TagRelative = ({ children }) => {
   return (
-    <TagBox
-      component={Link}
-      to={'/404'}>
+    <TagBox component={Link} to={'/404'}>
       <Typography
         sx={{
           fontSize: '12px',
@@ -36,7 +34,7 @@ const TagRelative = ({ children }) => {
         {children}
       </Typography>
     </TagBox>
-  )
-}
+  );
+};
 
-export default TagRelative
+export default TagRelative;

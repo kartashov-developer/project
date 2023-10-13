@@ -1,6 +1,6 @@
-import { Avatar, Box, Typography, styled } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Avatar, Box, Typography, styled } from '@mui/material';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StyledTypography = styled(Typography)(
   ({ theme }) => `
@@ -15,19 +15,13 @@ const StyledTypography = styled(Typography)(
       text-decoration: underline ${theme.palette.primary.light};
     }
   `
-)
+);
 
 const AvatarText = ({ avatarSrc, author, date, white }) => {
   return (
     <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-      <Box
-        sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}
-      >
-        <Avatar
-          src={avatarSrc}
-          component={Link}
-          to={'/404'}
-        />
+      <Box sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <Avatar src={avatarSrc} component={Link} to={'/404'} />
         <StyledTypography
           color={white ? 'white' : 'black'}
           variant='subtitle1'
@@ -46,7 +40,7 @@ const AvatarText = ({ avatarSrc, author, date, white }) => {
         {date}
       </Typography>
     </Box>
-  )
-}
+  );
+};
 
-export default AvatarText
+export default AvatarText;

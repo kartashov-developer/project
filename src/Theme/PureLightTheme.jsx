@@ -1,5 +1,5 @@
-import { alpha, createTheme, lighten, darken } from '@mui/material'
-import { color } from '@mui/system'
+import { alpha, createTheme, lighten, darken } from '@mui/material';
+import { color } from '@mui/system';
 
 const themeColors = {
   primary: '#6A983C',
@@ -8,8 +8,8 @@ const themeColors = {
   warning: '#E5704B',
   error: '#FF1943',
   info: '#33C2FF',
-  white: '#ffffff',
-}
+  white: '#ffffff'
+};
 
 const colors = {
   primary: {
@@ -17,41 +17,41 @@ const colors = {
     main: '#6A983C',
     light: '#92C064',
     lighter: '#C8DEB3',
-    lightest: '#F4F8EC',
+    lightest: '#F4F8EC'
   },
   secondary: {
     darker: '#575757',
     main: '#151515',
     light: '#A9A9A9',
     lighter: '#D1D1D1',
-    lightest: '#EBEBEB',
+    lightest: '#EBEBEB'
   },
   success: {
     lighter: alpha(themeColors.success, 0.1),
     light: lighten(themeColors.success, 0.3),
     main: themeColors.success,
-    dark: darken(themeColors.success, 0.2),
+    dark: darken(themeColors.success, 0.2)
   },
   warning: {
     darker: '#E5704B',
     main: '#C7522D',
     light: '#EB8D70',
     lighter: '#F7C6B7',
-    lightest: '#FFF1ED',
+    lightest: '#FFF1ED'
   },
   error: {
     lighter: alpha(themeColors.error, 0.1),
     light: lighten(themeColors.error, 0.3),
     main: themeColors.error,
-    dark: darken(themeColors.error, 0.2),
+    dark: darken(themeColors.error, 0.2)
   },
   info: {
     lighter: alpha(themeColors.info, 0.1),
     light: lighten(themeColors.info, 0.3),
     main: themeColors.info,
-    dark: darken(themeColors.info, 0.2),
-  },
-}
+    dark: darken(themeColors.info, 0.2)
+  }
+};
 
 export const PureLightTheme = createTheme({
   palette: {
@@ -60,7 +60,7 @@ export const PureLightTheme = createTheme({
       main: '#6A983C',
       light: '#92C064',
       lighter: '#C8DEB3',
-      lightest: '#F4F8EC',
+      lightest: '#F4F8EC'
     },
     secondary: {
       darker: '#575757',
@@ -73,26 +73,26 @@ export const PureLightTheme = createTheme({
       lighter: alpha(themeColors.success, 0.1),
       light: lighten(themeColors.success, 0.3),
       main: themeColors.success,
-      dark: darken(themeColors.success, 0.2),
+      dark: darken(themeColors.success, 0.2)
     },
     warning: {
       darker: '#E5704B',
       main: '#C7522D',
       light: '#EB8D70',
       lighter: '#F7C6B7',
-      lightest: '#FFF1ED',
+      lightest: '#FFF1ED'
     },
     error: {
       lighter: alpha(themeColors.error, 0.1),
       light: lighten(themeColors.error, 0.3),
       main: themeColors.error,
-      dark: darken(themeColors.error, 0.2),
+      dark: darken(themeColors.error, 0.2)
     },
     info: {
       lighter: alpha(themeColors.info, 0.1),
       light: lighten(themeColors.info, 0.3),
       main: themeColors.info,
-      dark: darken(themeColors.info, 0.2),
+      dark: darken(themeColors.info, 0.2)
     },
     grey: {
       100: '#F9F9F9',
@@ -107,8 +107,8 @@ export const PureLightTheme = createTheme({
       md: 960,
       breakpoint: 1170,
       lg: 1260,
-      xl: 1840,
-    },
+      xl: 1840
+    }
   },
   spacing: 4,
   components: {
@@ -116,21 +116,21 @@ export const PureLightTheme = createTheme({
       styleOverrides: {
         'html, body': {
           width: '100%',
-          height: '100%',
+          height: '100%'
         },
         body: {
           display: 'flex',
           flexDirection: 'column',
           minHeight: '100%',
           width: '100%',
-          flex: 1,
+          flex: 1
         },
         '#root': {
           width: '100%',
           height: '100%',
           display: 'flex',
           flex: 1,
-          flexDirection: 'column',
+          flexDirection: 'column'
         },
         html: {
           display: 'flex',
@@ -138,26 +138,26 @@ export const PureLightTheme = createTheme({
           minHeight: '100%',
           width: '100%',
           MozOsxFontSmoothing: 'grayscale',
-          WebkitFontSmoothing: 'antialiased',
-        },
-      },
+          WebkitFontSmoothing: 'antialiased'
+        }
+      }
     },
     MuiInput: {
       styleOverrides: {
         root: {
-          padding: '0px',
+          padding: '0px'
         },
         input: {
-          padding: '0px',
-        },
+          padding: '0px'
+        }
       }
     },
     MuiInputBase: {
       styleOverrides: {
         input: {
           height: '19px',
-          fontSize: '14px',
-        },
+          fontSize: '14px'
+        }
       }
     },
     MuiBadge: {
@@ -197,17 +197,41 @@ export const PureLightTheme = createTheme({
           lineHeight: 'normal',
 
           '&:hover, &.MuiSelected': {
-            textDecoration: 'underline',
+            textDecoration: 'underline'
           },
           '&:active': {
-            color: colors.primary.darker,
+            color: colors.primary.darker
+          }
+        }
+      }
+    },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        root: {
+          margin: '6px 0px',
+          '& .MuiLink-root, &.MuiLink-underlineHover': {
+            fontSize: '14px',
+            fontFamily: 'Poppins',
+            ':hover': {
+              color: colors.secondary.main
+            }
           },
+          '& .MuiTypography-body1': {
+            color: colors.primary.main,
+          },
+          '& .MuiSvgIcon-root': {
+            marginRight: '1px',
+            fontSize: 'large',
+            ':hover': {
+              color: colors.secondary.main
+            }
+          }
         },
       },
     },
     MuiButton: {
       defaultProps: {
-        disableRipple: true,
+        disableRipple: true
       },
       styleOverrides: {
         root: {
@@ -217,10 +241,10 @@ export const PureLightTheme = createTheme({
           borderRadius: '12px'
         },
         endIcon: {
-          marginRight: -6,
+          marginRight: -6
         },
         startIcon: {
-          marginLeft: 6,
+          marginLeft: 6
         },
         outlinedPrimary: {
           backgroundColor: 'themeColors.white',
@@ -230,12 +254,12 @@ export const PureLightTheme = createTheme({
 
           '&:hover, &.MuiSelected': {
             backgroundColor: colors.primary.lighter,
-            border: '2px solid ' + colors.primary.main,
+            border: '2px solid ' + colors.primary.main
           },
           '&:active': {
             backgroundColor: alpha(colors.primary.light, 0.3),
-            border: '2px solid ' + alpha(colors.primary.darker, 0.5),
-          },
+            border: '2px solid ' + alpha(colors.primary.darker, 0.5)
+          }
         },
         containedPrimary: {
           backgroundColor: colors.primary.main,
@@ -245,12 +269,12 @@ export const PureLightTheme = createTheme({
 
           '&:hover, &.MuiSelected': {
             backgroundColor: darken(colors.primary.darker, 0.1),
-            border: '2px solid ' + darken(colors.primary.darker, 0.4),
+            border: '2px solid ' + darken(colors.primary.darker, 0.4)
           },
           '&:active': {
             backgroundColor: darken(colors.primary.darker, 0.25),
-            border: '2px solid ' + darken(colors.primary.darker, 0.6),
-          },
+            border: '2px solid ' + darken(colors.primary.darker, 0.6)
+          }
         },
         textPrimary: {
           backgroundColor: '#F5F5F5',
@@ -259,22 +283,22 @@ export const PureLightTheme = createTheme({
           borderRadius: '12px',
 
           '&:hover, &.MuiSelected': {
-            backgroundColor: colors.secondary.lightest,
+            backgroundColor: colors.secondary.lightest
           },
           '&:active': {
-            backgroundColor: colors.secondary.lighter,
-          },
+            backgroundColor: colors.secondary.lighter
+          }
         },
         sizeSmall: {
-          padding: '3px 12px',
+          padding: '3px 12px'
         },
         sizeMedium: {
-          padding: '12px 16px',
+          padding: '12px 16px'
         },
         sizeLarge: {
-          padding: '12px 48px',
-        },
-      },
+          padding: '12px 48px'
+        }
+      }
     },
     MuiCardActions: {
       styleOverrides: {
@@ -288,7 +312,7 @@ export const PureLightTheme = createTheme({
         root: {
           width: '32px',
           height: '32px'
-        },
+        }
       }
     },
     MuiTypography: {
@@ -303,57 +327,57 @@ export const PureLightTheme = createTheme({
           subtitle1: 'div',
           subtitle2: 'div',
           body1: 'div',
-          body2: 'div',
-        },
+          body2: 'div'
+        }
       },
       styleOverrides: {
         gutterBottom: {
-          marginBottom: 4,
+          marginBottom: 4
         },
         paragraph: {
           fontSize: 17,
-          lineHeight: 1.7,
-        },
-      },
-    },
+          lineHeight: 1.7
+        }
+      }
+    }
   },
   typography: {
     fontFamily:
       '"Poppins", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
     h1: {
       fontWeight: 700,
-      fontSize: 32,
+      fontSize: 32
     },
     h2: {
       fontWeight: 700,
-      fontSize: 26,
+      fontSize: 26
     },
     h3: {
       fontWeight: 500,
-      fontSize: 22,
+      fontSize: 22
     },
     h4: {
       fontWeight: 500,
-      fontSize: 18,
+      fontSize: 18
     },
     h5: {
       fontWeight: 500,
-      fontSize: 15,
+      fontSize: 15
     },
     body1: {
-      fontSize: 14,
+      fontSize: 14
     },
     button: {
-      fontWeight: 600,
+      fontWeight: 600
     },
     caption: {
       fontSize: 18,
-      textTransform: 'uppercase',
+      textTransform: 'uppercase'
     },
     subtitle1: {
       fontSize: 12,
       fontWeight: 400
-    },
+    }
   },
   shadows: [
     'none',
@@ -380,6 +404,6 @@ export const PureLightTheme = createTheme({
     'none',
     'none',
     'none',
-    'none',
-  ],
-})
+    'none'
+  ]
+});

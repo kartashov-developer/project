@@ -1,15 +1,25 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
-// Layouts
-import BaseLayout from './layouts/BaseLayout'
+import React from 'react';
+import { Navigate } from 'react-router-dom';
 
-import Home from './content/pages/Home/Home'
-import Other from './content/pages/Other'
+/* Layouts */
+import BaseLayout from './layouts/BaseLayout';
 
-// Status
-import Status404 from './content/pages/Status/Status404'
-import StatusComingSoon from './content/pages/Status/StatusComingSoon'
+/* Pages */
+import Home from './content/pages/Home/Home';
+import Other from './content/pages/Other/Other';
+import { Blog } from './content/pages/Blog/Blog';
 
+/*
+  Statuses:
+  DONE:404
+  DONE:ComingSoon
+  TODO:500
+  TODO:Maintenance
+*/
+import Status404 from './content/pages/Status/Status404';
+import StatusComingSoon from './content/pages/Status/StatusComingSoon';
+
+// Routes
 const routes = [
   {
     path: '',
@@ -23,17 +33,18 @@ const routes = [
       //     path: 'welcome',
       //     element: <Welcome />
       //   },
+      // Statuses
       {
         path: 'status',
         children: [
           {
             path: '',
-            element: <Navigate to="404" replace />
+            element: <Navigate to='404' replace />
           },
           {
             path: '404',
             element: <Status404 />
-          },
+          }
           // {
           //   path: '500',
           //   element: <Status500 />
@@ -64,8 +75,12 @@ const routes = [
         path: '/other',
         element: <Other />
       },
+      {
+        path: '/blog',
+        element: <Blog />
+      }
     ]
   }
-]
+];
 
-export default routes
+export default routes;

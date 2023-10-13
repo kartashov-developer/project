@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 // MUI
-import { Link, Typography, Container, Box, Badge } from '@mui/material'
-import { styled } from '@mui/material/styles'
+import { Link, Typography, Container, Box, Badge } from '@mui/material';
+import { styled } from '@mui/material/styles';
 // Components
 import SearchArea from './SearchArea';
 // -------------------------------------------------------------------------
@@ -15,7 +15,7 @@ const WrapperBox = styled(Box)(
     padding: 40px 0px;
     border-top: 1px solid ${theme.palette.grey[200]};
   `
-)
+);
 // -------------------------------------------------------------------------
 export default function Info() {
   return (
@@ -32,14 +32,23 @@ export default function Info() {
       <SearchArea />
       {/* Two Icon Buttons */}
       <Box sx={{ display: 'flex', alignItems: 'center', gap: '40px' }}>
-        <img src='../../../public/static/images/logos/ic-actions-user.svg' alt='Profile Button' />
-        <Badge badgeContent={4} anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}>
-          <img src='../../../public/static/images/logos/ic-ecommerce-basket.svg' alt='Basket Button' />
+        <img
+          src='../../../public/static/images/logos/ic-actions-user.svg'
+          alt='Profile Button'
+        />
+        <Badge
+          badgeContent={4}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left'
+          }}
+        >
+          <img
+            src='../../../public/static/images/logos/ic-ecommerce-basket.svg'
+            alt='Basket Button'
+          />
         </Badge>
       </Box>
     </WrapperBox>
-  )
+  );
 }

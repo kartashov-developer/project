@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Button, Divider, Typography, styled } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Box, Button, Divider, Typography, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ButtonGoHome = styled(Button)(
   () => `
@@ -9,7 +9,7 @@ const ButtonGoHome = styled(Button)(
     font-size: 25px;
     padding: 2px 10px;
   `
-)
+);
 
 const StyledBoxComingSoon = styled(Box)(
   () => `
@@ -20,7 +20,7 @@ const StyledBoxComingSoon = styled(Box)(
     padding: 20px 0px;
     gap: 20px;
   `
-)
+);
 
 const StatusComingSoon = () => {
   return (
@@ -32,18 +32,16 @@ const StatusComingSoon = () => {
         width='35%'
       />
       <Divider width={'55%'} />
-      <Typography variant='h2'>We're working on implementing the last features before our launch!</Typography>
-      <ButtonGoHome
-        variant='contained'
-        component={Link}
-        to={'/'}
-      >
+      <Typography variant='h2'>
+        We're working on implementing the last features before our launch!
+      </Typography>
+      <ButtonGoHome variant='contained' component={Link} to={'/'}>
         Go home
       </ButtonGoHome>
       <Divider width={'55%'} />
       {/* <br /> */}
-    </StyledBoxComingSoon >
-  )
-}
+    </StyledBoxComingSoon>
+  );
+};
 
-export default StatusComingSoon
+export default StatusComingSoon;

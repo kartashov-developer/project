@@ -74,4 +74,4 @@ export const categoryMenu = [
     categoryName: 'Pork',
     menu: 'block3'
   }
-]
+];

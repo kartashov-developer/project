@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Button, Divider, Typography, styled } from '@mui/material'
-import { Link } from 'react-router-dom'
+import { Box, Button, Divider, Typography, styled } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ButtonGoHome = styled(Button)(
   () => `
@@ -9,7 +9,7 @@ const ButtonGoHome = styled(Button)(
     font-size: 25px;
     padding: 2px 10px;
   `
-)
+);
 
 const StyledBox404 = styled(Box)(
   () => `
@@ -19,7 +19,7 @@ const StyledBox404 = styled(Box)(
     padding: 20px 0px;
     gap: 20px;
   `
-)
+);
 
 const Status404 = () => {
   return (
@@ -31,17 +31,13 @@ const Status404 = () => {
       />
       <Divider width={'55%'} />
       <Typography variant='h2'>No such page. Maybe, go home?</Typography>
-      <ButtonGoHome
-        variant='contained'
-        component={Link}
-        to={'/'}
-      >
+      <ButtonGoHome variant='contained' component={Link} to={'/'}>
         Go home
       </ButtonGoHome>
       <Divider width={'55%'} />
       {/* <br /> */}
-    </StyledBox404 >
-  )
-}
+    </StyledBox404>
+  );
+};
 
-export default Status404
+export default Status404;

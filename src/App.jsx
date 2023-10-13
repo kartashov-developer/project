@@ -1,20 +1,20 @@
-import React from 'react'
+import React from 'react';
 // Router imports
-import { useRoutes } from 'react-router-dom'
-import routes from './router'
+import { useRoutes } from 'react-router-dom';
+import routes from './router';
 // MUI imports
-import { CssBaseline } from '@mui/material'
-import ThemeProvider from './theme/ThemeProvider'
-// import ThemeProvider from './theme/ThemeProvider'
+import { CssBaseline } from '@mui/material';
+import ThemeProvider from './theme/ThemeProvider';
 
 function App() {
-  const content = useRoutes(routes)
+  const content = useRoutes(routes);
+
   return (
     <ThemeProvider>
       <CssBaseline />
       {content}
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

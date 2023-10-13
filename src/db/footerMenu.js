@@ -5,13 +5,16 @@ export const footerMenu = [
     columnLinks: [
       {
         linkName: 'About Us'
-      }, {
-        linkName: 'Careers'
-      }, {
-        linkName: 'Press Releases'
-      }, {
-        linkName: 'Connections'
       },
+      {
+        linkName: 'Careers'
+      },
+      {
+        linkName: 'Press Releases'
+      },
+      {
+        linkName: 'Connections'
+      }
     ]
   },
   {
@@ -20,13 +23,16 @@ export const footerMenu = [
     columnLinks: [
       {
         linkName: 'Facebook'
-      }, {
-        linkName: 'Twitter'
-      }, {
-        linkName: 'Releases'
-      }, {
-        linkName: 'LinkedIn'
       },
+      {
+        linkName: 'Twitter'
+      },
+      {
+        linkName: 'Releases'
+      },
+      {
+        linkName: 'LinkedIn'
+      }
     ]
   },
   {
@@ -35,13 +41,16 @@ export const footerMenu = [
     columnLinks: [
       {
         linkName: 'Become an Affiliate'
-      }, {
-        linkName: 'Advertise your product'
-      }, {
-        linkName: 'Sell on Market'
-      }, {
-        linkName: 'LinkedIn'
       },
+      {
+        linkName: 'Advertise your product'
+      },
+      {
+        linkName: 'Sell on Market'
+      },
+      {
+        linkName: 'LinkedIn'
+      }
     ]
   },
   {
@@ -50,13 +59,16 @@ export const footerMenu = [
     columnLinks: [
       {
         linkName: 'Your account'
-      }, {
-        linkName: 'Returns Centre'
-      }, {
-        linkName: '100 % purchase protection'
-      }, {
-        linkName: 'Chat with us'
       },
+      {
+        linkName: 'Returns Centre'
+      },
+      {
+        linkName: '100 % purchase protection'
+      },
+      {
+        linkName: 'Chat with us'
+      }
     ]
-  },
-]
+  }
+];

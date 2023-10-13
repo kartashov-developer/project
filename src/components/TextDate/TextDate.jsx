@@ -1,6 +1,6 @@
-import { Box, Typography, styled } from '@mui/material'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import { Box, Typography, styled } from '@mui/material';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StyledTypography = styled(Typography)(
   ({ theme }) => `
@@ -16,14 +16,12 @@ const StyledTypography = styled(Typography)(
       }
 }
 `
-)
+);
 
 const TextDate = ({ author, date, white }) => {
   return (
     <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
-      <Box
-        sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}
-      >
+      <Box sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
         <StyledTypography
           color={white ? 'white' : 'black'}
           variant='subtitle1'
@@ -42,7 +40,7 @@ const TextDate = ({ author, date, white }) => {
         {date}
       </Typography>
     </Box>
-  )
-}
+  );
+};
 
-export default TextDate
+export default TextDate;

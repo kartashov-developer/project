@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Button, Typography, styled } from '@mui/material'
+import React from 'react';
+import { Box, Button, Typography, styled } from '@mui/material';
 
 const StyledBannerBox = styled(Box)(
   () => `
@@ -13,17 +13,17 @@ const StyledBannerBox = styled(Box)(
     border: 1px solid #000;
     border-radius: 12px;
   `
-)
+);
 
 const Banner = () => {
   return (
     <StyledBannerBox>
       <Box>
         <div></div>
-        <Typography variant="subtitle1" color="initial" pb={1}>
+        <Typography variant='subtitle1' color='initial' pb={1}>
           Banner focus
         </Typography>
-        <Typography variant="h3" color="initial" fontWeight={'600'}>
+        <Typography variant='h3' color='initial' fontWeight={'600'}>
           Space for heading
         </Typography>
       </Box>
@@ -31,15 +31,14 @@ const Banner = () => {
         <Button
           variant='outlined'
           endIcon={
-            <img src='../../../public/static/images/icons/right-arrow.svg'
-            />
+            <img src='../../../public/static/images/icons/right-arrow.svg' />
           }
         >
           Read receipes
         </Button>
       </Box>
     </StyledBannerBox>
-  )
-}
+  );
+};
 
-export default Banner
+export default Banner;

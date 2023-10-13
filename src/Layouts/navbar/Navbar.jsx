@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 // MUI
-import { IconButton, Typography, Container, Box, Button } from '@mui/material'
-import { styled } from '@mui/material/styles'
+import { IconButton, Typography, Container, Box, Button } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 const ContainerWrapper = styled(Container)(
   ({ theme }) => `
@@ -14,7 +14,7 @@ const ContainerWrapper = styled(Container)(
     margin-bottom: 0px;
     background-color: ${theme.palette.grey[100]};
   `
-)
+);
 
 const CategoriesButton = styled(Button)(
   ({ theme }) => `
@@ -41,7 +41,7 @@ const CategoriesButton = styled(Button)(
       // }
     }
   `
-)
+);
 
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
@@ -68,12 +68,18 @@ export default function Navbar() {
               pointerEvents: 'none',
               '&:hover': {
                 backgroundColor: '#F9F9F9'
-              },
-            }}>
-            <img src='../../../public/static/images/logos/ic-chevron-down.svg' style={{ height: '12px', margin: '0px' }} />
+              }
+            }}
+          >
+            <img
+              src='../../../public/static/images/logos/ic-chevron-down.svg'
+              style={{ height: '12px', margin: '0px' }}
+            />
           </IconButton>
         }
-      >Bakery</CategoriesButton>
-    </ContainerWrapper >
-  )
+      >
+        Bakery
+      </CategoriesButton>
+    </ContainerWrapper>
+  );
 }
