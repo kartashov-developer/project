@@ -110,6 +110,7 @@ export default function Info() {
 
   return (
     <WrapperBox>
+      {/* Alert */}
       <Snackbar
         open={open}
         autoHideDuration={6000}
@@ -129,6 +130,7 @@ export default function Info() {
         }
         action={action}
       />
+      {/* Form of Search */}
       <FormControl sx={{ m: 1 }} variant="standard" >
         <InputLabel htmlFor="demo-customized-select-native"></InputLabel>
         <Select
@@ -136,6 +138,7 @@ export default function Info() {
           input={<BootstrapInput />}
           defaultValue={100}
         >
+          {/* Search Menu */}
           {categoryMenuForSearch.map((item) => {
             return (
               <MenuItem key={item.id} value={item.id}>
@@ -145,12 +148,14 @@ export default function Info() {
           })}
         </Select>
       </FormControl>
+
       <Divider
         orientation='vertical'
         flexItem
         sx={{ backgroundColor: '#D1D1D1', mr: '24px', ml: '24px' }}
       />
 
+      {/* Input */}
       <Input
         disableUnderline
         placeholder='Search products, categories ...'
@@ -158,6 +163,7 @@ export default function Info() {
         sx={{ width: '257px', height: '10px' }}
         onChange={handleClick}
       />
+      
       <SearchIcon
         sx={{ transform: 'rotate(90deg)', cursor: 'pointer', ml: '12px' }}
         onClick={handleClick}

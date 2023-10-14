@@ -329,6 +329,27 @@ export const PureLightTheme = createTheme({
         }
       }
     },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#F9F9F9',
+          padding: 1,
+          margin: 0
+        }
+      }
+    },
+    MuiMenuItem: {
+      styleOverrides: {
+        root: {
+          '&:hover': {
+            backgroundColor: colors.primary.lighter
+          },
+          '&:focus': {
+            backgroundColor: colors.primary.lighter
+          },
+        }
+      }
+    },
     MuiTypography: {
       defaultProps: {
         variantMapping: {

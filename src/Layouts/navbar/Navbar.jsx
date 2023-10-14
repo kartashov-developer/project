@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 // MUI
-import { IconButton, Typography, Container, Box, Button } from '@mui/material';
+import { IconButton, Typography, Container, Box, Button, Menu, MenuItem } from '@mui/material';
 import { styled } from '@mui/material/styles';
-
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+// DB
+import { navbarMenu } from '../../db/navbarMenu';
+// -----------------------------------------------------------------------------
+/* Styled Components */
 const ContainerWrapper = styled(Container)(
   ({ theme }) => `
     display: flex;
@@ -21,10 +25,11 @@ const CategoriesButton = styled(Button)(
     height: 23px;
     background: ${theme.palette.grey[100]};
     padding: 0;
-    font-size: 15px;i
+    font-size: 15px;
     font-weight: 500;
     &:hover {
       background-color: ${theme.palette.grey[100]};
+      text-decoration: underline;
     },
     &:focus {
       background-color: ${theme.palette.grey[100]};
@@ -35,42 +40,28 @@ const CategoriesButton = styled(Button)(
       width: 12px;
       height: 12px;
       color: #000;
-      // :hover {
-      //   transition: transform 0.3s 0s;
-      //   transform: rotate(360deg);
-      // }
     }
   `
 );
-
+/* Navbar Component */
 export default function Navbar() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const handleMenuClose = () => {
+    setAnchorEl(null);
   };
+
   return (
     <ContainerWrapper disableGutters>
       <CategoriesButton
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        sx={{ zIndex: '1000' }}
+        onClick={handleMenuOpen}
         variant='text'
         endIcon={
-          <IconButton
-            className={isHovered ? 'rotating' : ''}
-            sx={{
-              padding: 0,
-              pointerEvents: 'none',
-              '&:hover': {
-                backgroundColor: '#F9F9F9'
-              }
-            }}
-          >
+          <IconButton sx={{ padding: '1px 0 0px 0' }}>
             <img
               src='../../../public/static/images/logos/ic-chevron-down.svg'
               style={{ height: '12px', margin: '0px' }}
@@ -80,6 +71,21 @@ export default function Navbar() {
       >
         Bakery
       </CategoriesButton>
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleMenuClose}
+      >
+      {navbarMenu.filter(item => {
+        return item.categoryName === 'Bakery'
+      }).map(item => {
+        return (
+        <MenuItem key={item.id}>
+          <Typography variant='h5'>{item.title}</Typography>
+        </MenuItem>
+        )
+      })}
+      </Menu>
     </ContainerWrapper>
   );
 }

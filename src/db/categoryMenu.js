@@ -6,12 +6,12 @@ export const categoryMenu = [
   },
   {
     id: 2,
-    categoryName: 'Fruit and Vegetables',
+    categoryName: 'Fruit',
     menu: 'block1'
   },
   {
     id: 3,
-    categoryName: 'Meat and Fish',
+    categoryName: 'Meat',
     menu: 'block1'
   },
   {
@@ -26,12 +26,12 @@ export const categoryMenu = [
   },
   {
     id: 6,
-    categoryName: 'Kitchen',
+    categoryName: 'Vegetables',
     menu: 'block2'
   },
   {
     id: 7,
-    categoryName: 'Meat and Fish',
+    categoryName: 'Fish',
     menu: 'block2'
   },
   {
