@@ -1,14 +1,8 @@
-import { useState } from 'react'
+
 // Components
 import { Breadcrumb2 } from '../../../components/Breadcrumbs/Breadcrumb2';
 // MUI
-import { Container, Grid, Typography, Button } from '@mui/material';
-import { Box as BoxM } from '@mui/material'
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
+import { Container, Grid, Box, Typography, Divider } from '@mui/material';
 // MUI icons
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
@@ -16,17 +10,13 @@ import SchoolIcon from '@mui/icons-material/School';
 import StarIcon from '@mui/icons-material/Star';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import DevicesOtherIcon from '@mui/icons-material/DevicesOther';
+
+import { CareersTab } from '../../../components/CareersTab/CareersTab';
 // -----------------------------------------------------------------------------
+
+
 /* Careers page-component */
 export const Careers = () => {
-  /* useState hook for changing tabs
-  initialValue = 1st tab (default) */
-  const [tabValue, setTabValue] = useState(1);
-
-  const handleTabValueChange = (event, newTabValue) => {
-    setTabValue(newTabValue);
-  };
-
   return (
     <>
       <Container disableGutters fullWidth sx={{ padding: '6px 0 64px 0' }}>
@@ -145,52 +135,13 @@ export const Careers = () => {
         {/* Positions Part */}
         <Box>
           {/* Heading */}
-          <Typography textAlign={'center'} variant="h2" mt={20}>
+          <Typography textAlign={'center'} variant="h2" mt={20} mb={5}>
             Opened Positions
           </Typography>
           {/* Tabs */}
-          <Box sx={{ width: '100%' }}>
-            <TabContext value={tabValue}>
-              <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <TabList onChange={handleTabValueChange} centered>
-                  <Tab label="Developer" value="1" />
-                  <Tab label="Designer" value="2" />
-                  <Tab label="Marketing" value="3" />
-                </TabList>
-              </Box>
-              {/* Inside Tabs */}
-              {/* 1st Job Developer */}
-              <TabPanel value="1" sx={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-              }}>
-                <Box>
-                  <Typography variant="h4" mb={1}>
-                    Go Developer
-                  </Typography>
-                  <Typography variant="body2">
-                    San-Francisco, Full-time
-                  </Typography>
-                </Box>
-                {/* Button */}
-                <Box>
-                  <Button variant='contained'>Apply Now</Button>
-                </Box>
-              </TabPanel>
-              {/* 1st Job Developer */}
-              <TabPanel value="1">
-                Item One
-                {/* Button */}
-              </TabPanel>
-              {/* 1st Job Developer */}
-              <TabPanel value="1">
-                Item One
-                {/* Button */}
-              </TabPanel>
-            </TabContext>
-          </Box>
+          <CareersTab />
         </Box>
+        <Divider/>
       </Container >
     </>
   )

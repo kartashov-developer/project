@@ -322,6 +322,13 @@ export const PureLightTheme = createTheme({
         }
       }
     },
+    MuiTabPanel: {
+      styleOverrides: {
+        root: {
+          padding: '0'
+        }
+      }
+    },
     MuiTypography: {
       defaultProps: {
         variantMapping: {

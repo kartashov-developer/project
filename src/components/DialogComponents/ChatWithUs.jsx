@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
+// MUI
 import {
   Dialog,
   DialogContent,
@@ -16,7 +16,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 import ThumbUpAltTwoToneIcon from '@mui/icons-material/ThumbUpAltTwoTone';
 import ErrorIcon from '@mui/icons-material/Error';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
-
+// -----------------------------------------------------------------------------
 const ChatWithUs = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [submittingDialog, setSubmittingDialog] = useState(false);
@@ -66,7 +66,7 @@ const ChatWithUs = () => {
           </DialogContentText>
           <TextField
             autoFocus
-            label='Email Adress'
+            label='Email Address'
             type='email'
             InputProps={{
               startAdornment: (

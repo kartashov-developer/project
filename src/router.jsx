@@ -88,7 +88,7 @@ const routes = [
       {
         path: '/careers',
         element: <Careers />
-      },
+      }
     ]
   }
 ];
