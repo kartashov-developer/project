@@ -62,8 +62,7 @@ const ChatWithUs = () => {
         <DialogTitle color='primary'>Chat with us</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            To chat with us, please fill the form below and we will answer
-            you.
+            To chat with us, please fill the form below and we will answer you.
           </DialogContentText>
           <TextField
             autoFocus
@@ -109,8 +108,16 @@ const ChatWithUs = () => {
             You need to wait 2-3 days.
           </DialogContentText>
           {errorMessage && (
-            <DialogContentText sx={{ pt: 2, display: 'flex', alignItems: 'center', gap: '5px', color: 'red' }}>
-              <ErrorIcon fontSize="small" />
+            <DialogContentText
+              sx={{
+                pt: 2,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '5px',
+                color: 'red'
+              }}
+            >
+              <ErrorIcon fontSize='small' />
               {errorMessage}
             </DialogContentText>
           )}
@@ -126,7 +133,7 @@ const ChatWithUs = () => {
             </Button>
           </DialogActions>
         </DialogContent>
-      </Dialog >
+      </Dialog>
       <Dialog open={submittingDialog} onClose={handleClose}>
         <DialogContent>
           <DialogContentText>Submitting...</DialogContentText>

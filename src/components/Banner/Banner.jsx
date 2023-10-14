@@ -3,7 +3,7 @@ import { Box, Button, Typography, styled } from '@mui/material';
 
 const StyledBannerBox = styled(Box)(
   () => `
-    width: 419px;
+    width: 420px;
     height: 280px;
     padding: 48px 0px 32px 32px;
     margin: 1px 0px;

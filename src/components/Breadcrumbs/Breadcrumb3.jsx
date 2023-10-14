@@ -1,30 +1,24 @@
-import { Divider, Breadcrumbs, Link, Typography } from "@mui/material"
+import { Divider, Breadcrumbs, Link, Typography } from '@mui/material';
 // Home Icon
-import { HomeIconStyled } from "../Icons/HomeIcon/HomeIcon";
+import { HomeIconStyled } from '../Icons/HomeIcon/HomeIcon';
 
-export const Breadcrumb3 = ({
-  link1,
-  page1,
-  mainPage,
-  icon
-}) => {
-
+export const Breadcrumb3 = ({ link1, page1, mainPage, icon }) => {
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb">
+      <Breadcrumbs aria-label='breadcrumb'>
         <Link
-          sx={{ display: 'flex', alignItems: 'center' }}
-          underline="hover"
-          color="inherit"
+          sx={{ display: 'flex' }}
+          underline='hover'
+          color='inherit'
           href='#'
         >
           <HomeIconStyled />
           Home
         </Link>
         <Link
-          sx={{ display: 'flex', alignItems: 'center' }}
-          underline="hover"
-          color="inherit"
+          sx={{ display: 'flex' }}
+          underline='hover'
+          color='inherit'
           href={link1}
         >
           {icon}
@@ -34,5 +28,5 @@ export const Breadcrumb3 = ({
       </Breadcrumbs>
       <Divider />
     </>
-  )
-}
+  );
+};

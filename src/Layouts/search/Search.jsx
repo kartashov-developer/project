@@ -25,7 +25,6 @@ export default function Info() {
         <img
           src='../../../public/static/images/logos/Freshnesecom.svg'
           alt='Logo Image'
-          style={{ cursor: 'pointer' }}
         />
       </Box>
       {/* Middle Component Search */}

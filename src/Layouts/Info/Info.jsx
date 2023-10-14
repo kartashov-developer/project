@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // MUI
 import { Link, Typography, Container, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { Link as LinkR } from 'react-router-dom';
 
 import ChatWithUs from '../../components/DialogComponents/ChatWithUs';
 
@@ -24,9 +25,9 @@ export default function Info() {
         {/* Phone */}
         <Link
           variant='subtitle1'
-          href="tel:+420336775664"
+          href='tel:+420336775664'
           sx={{
-            color: "#202020"
+            color: '#202020'
           }}
         >
           +420 336 775 664
@@ -34,9 +35,9 @@ export default function Info() {
         {/* Email */}
         <Link
           variant='subtitle1'
-          href="mailto:example@example.com"
+          href='mailto:example@example.com'
           sx={{
-            color: "#202020"
+            color: '#202020'
           }}
         >
           info@freshnesecom.com
@@ -44,8 +45,12 @@ export default function Info() {
       </Box>
       {/* Right Side */}
       <Box sx={{ display: 'flex', gap: '38px' }}>
-        <Link href='#'>Blog</Link>
-        <Link href='#'>About Us</Link>
+        <Link component={LinkR} to='/blog'>
+          Blog
+        </Link>
+        <Link component={LinkR} to='/about'>
+          About Us
+        </Link>
         <Link href='#'>Careers</Link>
       </Box>
     </ContainerWrapper>

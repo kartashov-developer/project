@@ -23,7 +23,7 @@ const TextDate = ({ author, date, white }) => {
     <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
       <Box sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
         <StyledTypography
-          color={white ? 'white' : 'black'}
+          color={white ? '#FFF' : 'black'}
           variant='subtitle1'
           fontFamily={'Open Sans'}
           component={Link}
@@ -33,7 +33,7 @@ const TextDate = ({ author, date, white }) => {
         </StyledTypography>
       </Box>
       <Typography
-        color={white ? 'white' : 'black'}
+        color={white ? '#FFF' : 'black'}
         variant='subtitle1'
         fontFamily={'Open Sans'}
       >

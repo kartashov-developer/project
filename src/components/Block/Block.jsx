@@ -6,7 +6,7 @@ const StyledMainContainer = styled(Container)(
   () => `
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 20px;
     padding: 45px 0px 0px 0px;
   `
 );

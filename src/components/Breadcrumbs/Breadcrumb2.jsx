@@ -1,23 +1,24 @@
-import { Divider, Breadcrumbs, Link, Typography } from "@mui/material"
+import { Divider, Breadcrumbs, Link, Typography } from '@mui/material';
+import { Link as LinkR } from 'react-router-dom';
 // Home Icon
-import { HomeIconStyled } from "../Icons/HomeIcon/HomeIcon";
+import { HomeIconStyled } from '../Icons/HomeIcon/HomeIcon';
 
 export const Breadcrumb2 = ({ mainPage }) => {
   return (
     <>
-      <Breadcrumbs aria-label="breadcrumb">
+      <Breadcrumbs aria-label='breadcrumb'>
         <Link
-          sx={{ display: 'flex', alignItems: 'center' }}
-          underline="hover"
-          color="inherit"
-          href='#'
+          component={LinkR}
+          to={'/'}
+          sx={{ display: 'flex' }}
+          underline='hover'
+          color='inherit'
         >
           <HomeIconStyled />
           Home
         </Link>
         <Typography>{mainPage}</Typography>
-      </Breadcrumbs >
-      <Divider />
+      </Breadcrumbs>
     </>
-  )
-}
+  );
+};

@@ -21,9 +21,14 @@ const AvatarText = ({ avatarSrc, author, date, white }) => {
   return (
     <Box sx={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
       <Box sx={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-        <Avatar src={avatarSrc} component={Link} to={'/404'} />
+        <Avatar
+          sx={{ width: 32, height: 32 }}
+          src={avatarSrc}
+          component={Link}
+          to={'/404'}
+        />
         <StyledTypography
-          color={white ? 'white' : 'black'}
+          color={white ? '#FFF' : 'black'}
           variant='subtitle1'
           fontFamily={'Open Sans'}
           component={Link}
@@ -33,7 +38,7 @@ const AvatarText = ({ avatarSrc, author, date, white }) => {
         </StyledTypography>
       </Box>
       <Typography
-        color={white ? 'white' : 'black'}
+        color={white ? '#FFF' : 'black'}
         variant='subtitle1'
         fontFamily={'Open Sans'}
       >

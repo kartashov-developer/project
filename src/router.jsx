@@ -8,6 +8,7 @@ import BaseLayout from './layouts/BaseLayout';
 import Home from './content/pages/Home/Home';
 import Other from './content/pages/Other/Other';
 import { Blog } from './content/pages/Blog/Blog';
+import { About } from './content/pages/About/About';
 
 /*
   Statuses:
@@ -78,6 +79,10 @@ const routes = [
       {
         path: '/blog',
         element: <Blog />
+      },
+      {
+        path: '/about',
+        element: <About />
       }
     ]
   }

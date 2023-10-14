@@ -98,6 +98,9 @@ export const PureLightTheme = createTheme({
       100: '#F9F9F9',
       200: '#F5F5F5',
       400: '#D1D1D1'
+    },
+    white: {
+      main: themeColors.white
     }
   },
   breakpoints: {
@@ -193,7 +196,6 @@ export const PureLightTheme = createTheme({
           cursor: 'pointer',
           fontFamily: 'Open Sans',
           fontStyle: 'normal',
-          fontWeight: '400',
           lineHeight: 'normal',
 
           '&:hover, &.MuiSelected': {
@@ -201,6 +203,11 @@ export const PureLightTheme = createTheme({
           },
           '&:active': {
             color: colors.primary.darker
+          },
+          '& .MuiTypography': {
+            '&:visited': {
+              color: colors.secondary.main
+            }
           }
         }
       }
@@ -208,7 +215,7 @@ export const PureLightTheme = createTheme({
     MuiBreadcrumbs: {
       styleOverrides: {
         root: {
-          margin: '6px 0px',
+          margin: '12px 0px',
           '& .MuiLink-root, &.MuiLink-underlineHover': {
             fontSize: '14px',
             fontFamily: 'Poppins',
@@ -217,7 +224,7 @@ export const PureLightTheme = createTheme({
             }
           },
           '& .MuiTypography-body1': {
-            color: colors.primary.main,
+            color: colors.primary.main
           },
           '& .MuiSvgIcon-root': {
             marginRight: '1px',
@@ -226,8 +233,8 @@ export const PureLightTheme = createTheme({
               color: colors.secondary.main
             }
           }
-        },
-      },
+        }
+      }
     },
     MuiButton: {
       defaultProps: {
