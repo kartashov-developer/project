@@ -51,7 +51,9 @@ export default function Info() {
         <Link component={LinkR} to='/about'>
           About Us
         </Link>
-        <Link href='#'>Careers</Link>
+        <Link component={LinkR} to='/careers'>
+          Careers
+        </Link>
       </Box>
     </ContainerWrapper>
   );

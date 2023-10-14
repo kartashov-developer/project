@@ -4,10 +4,12 @@ export const footerMenu = [
     columnName: 'Get in touch',
     columnLinks: [
       {
-        linkName: 'About Us'
+        linkName: 'About Us',
+        linkUrl: '/about'
       },
       {
-        linkName: 'Careers'
+        linkName: 'Careers',
+        linkUrl: '/careers'
       },
       {
         linkName: 'Press Releases'
