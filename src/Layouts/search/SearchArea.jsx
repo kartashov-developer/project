@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 // MUI
-import { Box, Button, Divider, IconButton, Input, Menu, MenuItem } from '@mui/material';
+import { Box, Alert, Divider, Input, MenuItem, Select, InputBase, FormControl, InputLabel } from '@mui/material';
 import {
   Search as SearchIcon,
   ExpandMore as ExpandMoreIcon
 } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
+// DB
+import { categoryMenuForSearch } from '../../db/categoryMenuForSearch';
 // -------------------------------------------------------------------------
 // MUI styled
 const WrapperBox = styled(Box)(
@@ -21,47 +23,66 @@ const WrapperBox = styled(Box)(
   `
 );
 
-const CategoriesButton = styled(Button)(
-  ({ theme }) => `
-    height: 23px;
-    background: ${theme.palette.grey[100]};
-    padding: 0;
-
-    &:hover {
-      background-color: ${theme.palette.grey[100]};
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
+  '& .MuiInputBase-input': {
+    borderRadius: 4,
+    backgroundColor: theme.palette.background.paper,
+    border: 'none',
+    width: 150,
+    fontSize: 15,
+    fontWeight: 700,
+    padding: '0',
+    background: '#F9F9F9',
+    transition: theme.transitions.create(['border-color', 'box-shadow']),
+    // Use the system font instead of the default Roboto font.
+    fontFamily: 'Poppins',
+    '&:hover': {
+      background: '#F9F9F9',
     },
-    &:focus {
-      background-color: ${theme.palette.grey[100]};
+    '&:active': {    
+      background: '#F9F9F9',
+    },
+    '&:focus': {
+      background: '#F9F9F9',
     }
-  `
-);
+  },
+  '& .MuiSvgIcon-root': {
+    marginLeft: 200,
+    '&:hover': {
+      border: 'none'
+    }
+  },
+  '& #demo-customized-select-native': {
+    minWidth: 0,
+    padding: 0,
+  }
+}));
 // -------------------------------------------------------------------------
 export default function Info() {
+  const [age, setAge] = React.useState('');
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
+
   return (
     <WrapperBox>
-      <CategoriesButton
-        variant='text'
-        endIcon={
-          <IconButton
-            size='medium'
-            sx={{
-              padding: 0,
-              pointerEvents: 'none',
-              '&:hover': {
-                backgroundColor: '#F9F9F9'
-              }
-            }}
-          >
-            <img
-              src='../../../public/static/images/logos/ic-chevron-down.svg'
-              style={{ height: '16px' }}
-            />
-          </IconButton>
-        }
-      >
-        All categories
-      </CategoriesButton>
-
+      <FormControl sx={{ m: 1 }} variant="standard" >
+        <InputLabel htmlFor="demo-customized-select-native"></InputLabel>
+        <Select
+          id="demo-customized-select-native"
+          onChange={handleChange}
+          input={<BootstrapInput />}
+          defaultValue={100}
+        >
+          {categoryMenuForSearch.map((item) => {
+            return (
+              <MenuItem key={item.id} value={item.id}>
+                {item.categoryName}
+              </MenuItem>
+            )
+          })}
+        </Select>
+      </FormControl>
       <Divider
         orientation='vertical'
         flexItem
@@ -70,13 +91,13 @@ export default function Info() {
 
       <Input
         disableUnderline
-        placeholder='Search Products, categories ...'
+        placeholder='Search products, categories ...'
         variant='filled'
         sx={{ width: '257px', height: '10px' }}
       />
       <SearchIcon
         sx={{ transform: 'rotate(90deg)', cursor: 'pointer', ml: '12px' }}
-        onClick={() => alert('FIX ME')}
+        onClick={() => {}}
       />
     </WrapperBox>
   );
