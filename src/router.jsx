@@ -9,6 +9,7 @@ import Home from './content/pages/Home/Home';
 import Other from './content/pages/Other/Other';
 import { Blog } from './content/pages/Blog/Blog';
 import { About } from './content/pages/About/About';
+import { Careers } from './content/pages/Careers/Careers';
 
 /*
   Statuses:
@@ -83,6 +84,10 @@ const routes = [
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/careers',
+        element: <Careers />
       }
     ]
   }

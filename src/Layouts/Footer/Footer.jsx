@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Container, Stack, Typography, styled } from '@mui/material';
 import { footerMenu } from '../../db/footerMenu';
 import { Link } from 'react-router-dom';
@@ -47,7 +46,11 @@ const Footer = () => {
               {menuTitle.columnName}
             </StyledHeaderTypography>
             {menuTitle.columnLinks.map((link) => (
-              <StyledCategoryLink key={link.linkName} href='/404'>
+              <StyledCategoryLink
+                component={Link}
+                key={link.linkName}
+                to={link.linkUrl}
+              >
                 {link.linkName}
               </StyledCategoryLink>
             ))}
