@@ -1,6 +1,7 @@
 import React from 'react';
 // MUI
-import { Link, Typography, Container, Box, Badge } from '@mui/material';
+import { Box, Badge } from '@mui/material';
+import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 // Components
 import SearchArea from './SearchArea';
@@ -22,10 +23,12 @@ export default function Info() {
     <WrapperBox>
       {/* Logo */}
       <Box sx={{ p: '16px 0px' }}>
-        <img
-          src='../../../public/static/images/logos/Freshnesecom.svg'
-          alt='Logo Image'
-        />
+        <Link to={'/'}>
+          <img
+            src='../../../public/static/images/logos/Freshnesecom.svg'
+            alt='Logo Image'
+          />
+        </Link>
       </Box>
       {/* Middle Component Search */}
       <SearchArea />
