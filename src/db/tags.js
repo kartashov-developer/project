@@ -20,5 +20,18 @@ export const tags = [
   'Seo tag',
   'Fish',
   'Fresh food',
-  'Lemons'
+  'Lemons',
+  'Avocadoes',
+  'Cucumbers',
+  'Pepper',
+  'Cabbage',
+  'Burgers',
+  'Fries',
+  'Wings',
+  'Beef',
+  'Pork',
+  'Chicken',
+  'Shark',
+  'Perch',
+  'Carp'
 ];

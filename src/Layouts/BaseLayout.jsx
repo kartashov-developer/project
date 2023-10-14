@@ -2,7 +2,7 @@ import React from 'react';
 // Router
 import { Outlet } from 'react-router';
 // MUI
-import { Container } from '@mui/material/';
+import { Container } from '@mui/material';
 // Components
 import Info from './Info/Info';
 import Search from './Search/Search';
@@ -15,7 +15,6 @@ export default function BaseLayout() {
     <>
       {/* Background */}
       <Container
-        maxWidth
         disableGutters
         sx={{
           position: 'absolute',

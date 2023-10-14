@@ -1,70 +1,70 @@
 export const categoryMenuForSearch = [
   {
     id: 100,
-    categoryName: 'All categories',
+    categoryName: 'All categories'
   },
   {
     id: 1,
-    categoryName: 'Bakery',
+    categoryName: 'Bakery'
   },
   {
     id: 2,
-    categoryName: 'Vegetables',
+    categoryName: 'Vegetables'
   },
   {
     id: 4,
-    categoryName: 'Drinks',
+    categoryName: 'Drinks'
   },
   {
     id: 5,
-    categoryName: 'Kitchen',
+    categoryName: 'Kitchen'
   },
   {
     id: 6,
-    categoryName: 'Kitchen',
+    categoryName: 'Kitchen'
   },
   {
     id: 7,
-    categoryName: 'Meat',
+    categoryName: 'Meat'
   },
   {
     id: 8,
-    categoryName: 'Nutrition',
+    categoryName: 'Nutrition'
   },
   {
     id: 9,
-    categoryName: 'Pharmacy',
+    categoryName: 'Pharmacy'
   },
   {
     id: 10,
-    categoryName: 'Baby',
+    categoryName: 'Baby'
   },
   {
     id: 11,
-    categoryName: 'Carrots',
+    categoryName: 'Carrots'
   },
   {
     id: 12,
-    categoryName: 'Tomatoes',
+    categoryName: 'Tomatoes'
   },
   {
     id: 13,
-    categoryName: 'Potatoes',
+    categoryName: 'Potatoes'
   },
   {
     id: 14,
-    categoryName: 'Chicken',
+    categoryName: 'Chicken'
   },
   {
     id: 15,
-    categoryName: 'Pork',
+    categoryName: 'Pork'
   },
   {
     id: 16,
-    categoryName: 'Fish',
+    categoryName: 'Fish'
   },
   {
     id: 17,
-    categoryName: 'Fruits',
+    categoryName: 'Fruits'
   }
 ];

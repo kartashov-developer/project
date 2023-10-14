@@ -1,8 +1,10 @@
-import { useState } from 'react';
 // MUI
-import { IconButton, Typography, Container, Box, Button, Menu, MenuItem } from '@mui/material';
+import { Container, MenuItem, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ZoomInIcon from '@mui/icons-material/ZoomIn';
+
+import { Link } from 'react-router-dom';
+
+import { CategoriesButton } from '../../components/CategoriesButton/CategoriesButton';
 // DB
 import { navbarMenu } from '../../db/navbarMenu';
 // -----------------------------------------------------------------------------
@@ -12,80 +14,166 @@ const ContainerWrapper = styled(Container)(
     display: flex;
     width: 100%;
     padding: 16px 0px 16px 0px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 39px;
+    gap: 120px;
     margin-bottom: 0px;
     background-color: ${theme.palette.grey[100]};
   `
 );
 
-const CategoriesButton = styled(Button)(
-  ({ theme }) => `
-    height: 23px;
-    background: ${theme.palette.grey[100]};
-    padding: 0;
-    font-size: 15px;
-    font-weight: 500;
-    &:hover {
-      background-color: ${theme.palette.grey[100]};
-      text-decoration: underline;
-    },
-    &:focus {
-      background-color: ${theme.palette.grey[100]};
-    }
-
-    .MuiButton-endIcon {
-      margin: 2px;
-      width: 12px;
-      height: 12px;
-      color: #000;
-    }
-  `
-);
 /* Navbar Component */
 export default function Navbar() {
-  const [anchorEl, setAnchorEl] = useState(null);
-
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <ContainerWrapper disableGutters>
       <CategoriesButton
-        onClick={handleMenuOpen}
-        variant='text'
-        endIcon={
-          <IconButton sx={{ padding: '1px 0 0px 0' }}>
-            <img
-              src='../../../public/static/images/logos/ic-chevron-down.svg'
-              style={{ height: '12px', margin: '0px' }}
-            />
-          </IconButton>
-        }
-      >
-        Bakery
-      </CategoriesButton>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleMenuClose}
-      >
-      {navbarMenu.filter(item => {
-        return item.categoryName === 'Bakery'
-      }).map(item => {
-        return (
-        <MenuItem key={item.id}>
-          <Typography variant='h5'>{item.title}</Typography>
-        </MenuItem>
-        )
-      })}
-      </Menu>
+        buttonText={'Bakery'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Bakery';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+
+      {/* Fruits */}
+      <CategoriesButton
+        buttonText={'Fruits'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Fruits';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+      {/* Vegetables */}
+      <CategoriesButton
+        buttonText={'Vegetables'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Vegetables';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+      {/* FastFood */}
+      <CategoriesButton
+        buttonText={'Fastfood'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'FastFood';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+      {/* Meat */}
+      <CategoriesButton
+        buttonText={'Meat'}
+        disabled={'disabled'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Meat';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+      {/* Fish */}
+      <CategoriesButton
+        buttonText={'Fish'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Fish';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
+      {/* Other */}
+      <CategoriesButton
+        buttonText={'Other'}
+        children={navbarMenu
+          .filter((item) => {
+            return item.categoryName === 'Other';
+          })
+          .map((item) => {
+            return (
+              <MenuItem key={item.id}>
+                <Typography
+                  variant='h5'
+                  component={Link}
+                  to={`/tags/${item.title}`}
+                >
+                  {item.title}
+                </Typography>
+              </MenuItem>
+            );
+          })}
+      />
     </ContainerWrapper>
   );
 }

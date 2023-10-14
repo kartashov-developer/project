@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 // MUI
-import { Box, Button, Divider, Input, MenuItem, Select, InputBase, FormControl, InputLabel, Snackbar, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Divider,
+  Input,
+  MenuItem,
+  Select,
+  InputBase,
+  FormControl,
+  InputLabel,
+  Snackbar,
+  Typography
+} from '@mui/material';
 import {
   Search as SearchIcon,
   ExpandMore as ExpandMoreIcon
@@ -39,13 +51,13 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     // Use the system font instead of the default Roboto font.
     fontFamily: 'Poppins',
     '&:hover': {
-      background: '#F9F9F9',
+      background: '#F9F9F9'
     },
-    '&:active': {    
-      background: '#F9F9F9',
+    '&:active': {
+      background: '#F9F9F9'
     },
     '&:focus': {
-      background: '#F9F9F9',
+      background: '#F9F9F9'
     }
   },
   '& .MuiSvgIcon-root': {
@@ -56,7 +68,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   },
   '& #demo-customized-select-native': {
     minWidth: 0,
-    padding: 0,
+    padding: 0
   }
 }));
 // -------------------------------------------------------------------------
@@ -77,19 +89,23 @@ export default function Info() {
   };
 
   const action = (
-    <Box sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      gap: 2
-    }}>
-      <Button variant='contained' size="large" onClick={handleClose}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 2
+      }}
+    >
+      <Button variant='contained' size='large' onClick={handleClose}>
         I forgive you!
       </Button>
-        <Typography variant='body2'>⬆ This variant will close that window.</Typography>
-      <Button 
-        variant='contained' 
-        size="small" 
-        sx={{ 
+      <Typography variant='body2'>
+        ⬆ This variant will close that window.
+      </Typography>
+      <Button
+        variant='contained'
+        size='small'
+        sx={{
           background: '#FFF',
           border: '2px solid #FFF',
           '&:hover': {
@@ -100,11 +116,11 @@ export default function Info() {
             background: '#FFF',
             border: '2px solid #FFF'
           }
-        }} 
+        }}
       >
-          <ChatWithUs />
+        <ChatWithUs />
       </Button>
-        <Typography variant='body2'>⬆ This variant will open dialog.</Typography>
+      <Typography variant='body2'>⬆ This variant will open dialog.</Typography>
     </Box>
   );
 
@@ -117,24 +133,20 @@ export default function Info() {
         onClose={handleClose}
         message={
           <>
-          <Typography variant='h2'>
-            Please, don't be mad!
-          </Typography>
-          <Typography variant='h6'>
-            Search is not working!
-          </Typography>
-          <Typography variant='subtitle2'>
-            We are trying to repair this right now...
-          </Typography>
-        </>
+            <Typography variant='h2'>Please, don't be mad!</Typography>
+            <Typography variant='h6'>Search is not working!</Typography>
+            <Typography variant='subtitle2'>
+              We are trying to repair this right now...
+            </Typography>
+          </>
         }
         action={action}
       />
       {/* Form of Search */}
-      <FormControl sx={{ m: 1 }} variant="standard" >
-        <InputLabel htmlFor="demo-customized-select-native"></InputLabel>
+      <FormControl sx={{ m: 1 }} variant='standard'>
+        <InputLabel htmlFor='demo-customized-select-native'></InputLabel>
         <Select
-          id="demo-customized-select-native"
+          id='demo-customized-select-native'
           input={<BootstrapInput />}
           defaultValue={100}
         >
@@ -144,7 +156,7 @@ export default function Info() {
               <MenuItem key={item.id} value={item.id}>
                 {item.categoryName}
               </MenuItem>
-            )
+            );
           })}
         </Select>
       </FormControl>
@@ -163,7 +175,7 @@ export default function Info() {
         sx={{ width: '257px', height: '10px' }}
         onChange={handleClick}
       />
-      
+
       <SearchIcon
         sx={{ transform: 'rotate(90deg)', cursor: 'pointer', ml: '12px' }}
         onClick={handleClick}

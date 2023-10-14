@@ -11,6 +11,10 @@ import { Blog } from './content/pages/Blog/Blog';
 import { About } from './content/pages/About/About';
 import { Careers } from './content/pages/Careers/Careers';
 
+import Tags from './content/pages/Tags/Tags';
+import TagDetail from './content/pages/Tags/TagDetail';
+import { tags } from './db/tags';
+
 /*
   Statuses:
   DONE:404
@@ -88,6 +92,14 @@ const routes = [
       {
         path: '/careers',
         element: <Careers />
+      },
+      {
+        path: '/tags',
+        element: <Tags />,
+        children: tags.map((tag) => ({
+          path: tag.toLowerCase(),
+          element: <TagDetail tag={tag} />
+        }))
       }
     ]
   }

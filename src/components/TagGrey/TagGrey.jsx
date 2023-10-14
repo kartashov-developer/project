@@ -2,6 +2,8 @@ import { Typography, styled } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { tags } from '../../db/tags.js';
+
 const TagBox = styled(Typography)(
   ({ theme }) => `
     padding: ${theme.spacing(0, 2)};
@@ -10,7 +12,7 @@ const TagBox = styled(Typography)(
     font-family: Poppins;
     font-weight: 600;
     text-decoration: none;
-    
+
     &.MuiTypography-root {
       color: ${theme.palette.secondary.main};
       font-size: 12px;
@@ -21,7 +23,7 @@ const TagBox = styled(Typography)(
       &:hover {
         text-decoration: underline ${theme.palette.primary.light};
       };
-      &:active { 
+      &:active {
         color: ${theme.palette.primary.light};;
       };
     }
@@ -30,7 +32,7 @@ const TagBox = styled(Typography)(
 
 const TagGrey = ({ children }) => {
   return (
-    <TagBox component={Link} to={'/404'}>
+    <TagBox component={Link} to={`/tags/${children.toLowerCase()}`}>
       {children}
     </TagBox>
   );

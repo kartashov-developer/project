@@ -206,7 +206,8 @@ export const PureLightTheme = createTheme({
           },
           '& .MuiTypography': {
             '&:visited': {
-              color: colors.secondary.main
+              color: colors.secondary.main,
+              textDecorationColor: colors.secondary.main
             }
           }
         }
@@ -347,6 +348,14 @@ export const PureLightTheme = createTheme({
           '&:focus': {
             backgroundColor: colors.primary.lighter
           },
+          '& .MuiTypography-root': {
+            textDecoration: 'none',
+            color: colors.secondary.main,
+            '&:visited': {
+              color: colors.secondary.main,
+              textDecoration: 'none'
+            }
+          }
         }
       }
     },

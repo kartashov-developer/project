@@ -41,7 +41,7 @@ const Footer = () => {
     <Container disableGutters>
       <WrappedContainer maxWidth='lg' disableGutters>
         {footerMenu.map((menuTitle) => (
-          <StackColumn>
+          <StackColumn key={menuTitle.id}>
             <StyledHeaderTypography variant='h4' key={menuTitle.id}>
               {menuTitle.columnName}
             </StyledHeaderTypography>
@@ -70,7 +70,6 @@ const Footer = () => {
         </Typography>
         <Container
           disableGutters
-          maxWidth
           sx={{
             display: 'flex',
             flexWrap: 'wrap',

@@ -1,26 +1,20 @@
+// MUI
 import { Container, Box, Typography, Divider } from '@mui/material';
-import { Breadcrumb2 } from '../../../components/Breadcrumbs/Breadcrumb2';
-import { ListItemCallout } from '../../../components/ListItemCallout/ListItemCallout';
-
-import BlogBlockBig from '../../../components/BlogBlockBig/BlogBlockBig';
-
-import SideMenu from '../../../components/SideMenu/SideMenu';
-import CategoryLink from '../../../components/CategoryLink/CategoryLink';
-import { blogMenu } from '../../../db/blogMenu';
-
-import BlogBlockRowSmall from '../../../components/BlogBlockRowSmall/BlogBlockRowSmall';
-
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import PaidIcon from '@mui/icons-material/Paid';
-
-const obj = {
-  string: 'string',
-  boo: true,
-  age: 32
-};
-
+// Components
+import { Breadcrumb2 } from '../../../components/Breadcrumbs/Breadcrumb2';
+import { ListItemCallout } from '../../../components/ListItemCallout/ListItemCallout';
+import BlogBlockBig from '../../../components/BlogBlockBig/BlogBlockBig';
+import BlogBlockRowSmall from '../../../components/BlogBlockRowSmall/BlogBlockRowSmall';
+import SideMenu from '../../../components/SideMenu/SideMenu';
+import CategoryLink from '../../../components/CategoryLink/CategoryLink';
+// DB
+import { blogMenu } from '../../../db/blogMenu';
+import { blogAuthors } from '../../../db/blogAuthors';
+// -----------------------------------------------------------------------------
 export const Blog = () => {
   // Filter the category menu. I need menu: 'block1'.
   const filteredBlockMenuCategories = blogMenu.filter(
@@ -44,13 +38,13 @@ export const Blog = () => {
           mb: 20
         }}
       >
+        <BlogBlockBig tag={'Receipt'} text={'How to cook scrambled eggs'} />
         <BlogBlockBig
-          tag={'Vegetables'}
+          tag={'Receipt'}
           text={
-            'This is a space for your blog headline, it can be long don’t worry about that'
+            'How to eat a lot and not gain weight? I will tell you in this article'
           }
         />
-        <BlogBlockBig tag={'Receipt'} text={'asdf'} />
       </Container>
       {/* Other */}
       <Container>
