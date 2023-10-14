@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // MUI
-import { Box, Alert, Divider, Input, MenuItem, Select, InputBase, FormControl, InputLabel } from '@mui/material';
+import { Box, Button, Divider, Input, MenuItem, Select, InputBase, FormControl, InputLabel, Snackbar, Typography } from '@mui/material';
 import {
   Search as SearchIcon,
   ExpandMore as ExpandMoreIcon
@@ -8,6 +8,8 @@ import {
 import { styled } from '@mui/material/styles';
 // DB
 import { categoryMenuForSearch } from '../../db/categoryMenuForSearch';
+
+import ChatWithUs from '../../components/DialogComponents/ChatWithUs';
 // -------------------------------------------------------------------------
 // MUI styled
 const WrapperBox = styled(Box)(
@@ -58,19 +60,79 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
   }
 }));
 // -------------------------------------------------------------------------
+
 export default function Info() {
-  const [age, setAge] = React.useState('');
-  const handleChange = (event) => {
-    setAge(event.target.value);
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(true);
   };
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+  const action = (
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      gap: 2
+    }}>
+      <Button variant='contained' size="large" onClick={handleClose}>
+        I forgive you!
+      </Button>
+        <Typography variant='body2'>⬆ This variant will close that window.</Typography>
+      <Button 
+        variant='contained' 
+        size="small" 
+        sx={{ 
+          background: '#FFF',
+          border: '2px solid #FFF',
+          '&:hover': {
+            background: '#FFF',
+            border: '2px solid #FFF'
+          },
+          '&:focus': {
+            background: '#FFF',
+            border: '2px solid #FFF'
+          }
+        }} 
+      >
+          <ChatWithUs />
+      </Button>
+        <Typography variant='body2'>⬆ This variant will open dialog.</Typography>
+    </Box>
+  );
 
   return (
     <WrapperBox>
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={
+          <>
+          <Typography variant='h2'>
+            Please, don't be mad!
+          </Typography>
+          <Typography variant='h6'>
+            Search is not working!
+          </Typography>
+          <Typography variant='subtitle2'>
+            We are trying to repair this right now...
+          </Typography>
+        </>
+        }
+        action={action}
+      />
       <FormControl sx={{ m: 1 }} variant="standard" >
         <InputLabel htmlFor="demo-customized-select-native"></InputLabel>
         <Select
           id="demo-customized-select-native"
-          onChange={handleChange}
           input={<BootstrapInput />}
           defaultValue={100}
         >
@@ -94,10 +156,11 @@ export default function Info() {
         placeholder='Search products, categories ...'
         variant='filled'
         sx={{ width: '257px', height: '10px' }}
+        onChange={handleClick}
       />
       <SearchIcon
         sx={{ transform: 'rotate(90deg)', cursor: 'pointer', ml: '12px' }}
-        onClick={() => {}}
+        onClick={handleClick}
       />
     </WrapperBox>
   );
