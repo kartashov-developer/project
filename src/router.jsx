@@ -15,6 +15,9 @@ import Tags from './content/pages/Tags/Tags';
 import TagDetail from './content/pages/Tags/TagDetail';
 import { tags } from './db/tags';
 
+import Categories from './content/pages/Categories/Categories';
+import CategoriesDetail from './content/pages/Categories/CategoriesDetail';
+
 /*
   Statuses:
   DONE:404
@@ -50,7 +53,7 @@ const routes = [
           {
             path: '404',
             element: <Status404 />
-          }
+          },
           // {
           //   path: '500',
           //   element: <Status500 />
@@ -59,10 +62,10 @@ const routes = [
           //   path: 'maintenance',
           //   element: <StatusMaintenance />
           // },
-          // {
-          //   path: 'coming-soon',
-          //   element: <StatusComingSoon />
-          // }
+          {
+            path: 'coming-soon',
+            element: <StatusComingSoon />
+          }
         ]
       },
       {
@@ -100,6 +103,14 @@ const routes = [
           path: tag.toLowerCase(),
           element: <TagDetail tag={tag} />
         }))
+      },
+      {
+        path: '/categories',
+        element: <Categories />
+      },
+      {
+        path: '/categories/:category',
+        element: <CategoriesDetail />
       }
     ]
   }

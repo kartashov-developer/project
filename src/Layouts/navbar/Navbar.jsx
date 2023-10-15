@@ -12,13 +12,13 @@ import { navbarMenu } from '../../db/navbarMenu';
 const ContainerWrapper = styled(Container)(
   ({ theme }) => `
     display: flex;
-    width: 100%;
-    padding: 16px 0px 16px 0px;
     flex-direction: row;
     align-items: flex-start;
     gap: 120px;
-    margin-bottom: 0px;
-    background-color: ${theme.palette.grey[100]};
+    width: 100%;
+    padding: 16px 0px 16px 0px;
+    margin: 7px;
+    background-color: ${theme.palette.grey[0]};
   `
 );
 

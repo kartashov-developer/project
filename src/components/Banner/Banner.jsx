@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Button, Typography, styled } from '@mui/material';
 
+import { Link } from 'react-router-dom';
+
 const StyledBannerBox = styled(Box)(
   () => `
     width: 420px;
@@ -15,20 +17,25 @@ const StyledBannerBox = styled(Box)(
   `
 );
 
-const Banner = () => {
+const Banner = ({ title, backgroundImage, author }) => {
   return (
-    <StyledBannerBox>
+    <StyledBannerBox sx={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+    }}>
       <Box>
         <div></div>
         <Typography variant='subtitle1' color='initial' pb={1}>
-          Banner focus
+          written by '{author}'
         </Typography>
         <Typography variant='h3' color='initial' fontWeight={'600'}>
-          Space for heading
+          {title}
         </Typography>
       </Box>
       <Box>
         <Button
+          component={Link}
+          to={'/blog'}
           variant='outlined'
           endIcon={
             <img src='../../../public/static/images/icons/right-arrow.svg' />

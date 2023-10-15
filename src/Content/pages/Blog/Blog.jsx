@@ -13,7 +13,7 @@ import SideMenu from '../../../components/SideMenu/SideMenu';
 import CategoryLink from '../../../components/CategoryLink/CategoryLink';
 // DB
 import { blogMenu } from '../../../db/blogMenu';
-import { blogAuthors } from '../../../db/blogAuthors';
+import { blogLoremIpsum } from '../../../db/blogLoremIpsum';
 // -----------------------------------------------------------------------------
 export const Blog = () => {
   // Filter the category menu. I need menu: 'block1'.
@@ -38,13 +38,17 @@ export const Blog = () => {
           mb: 20
         }}
       >
-        <BlogBlockBig tag={'Receipt'} text={'How to cook scrambled eggs'} />
-        <BlogBlockBig
-          tag={'Receipt'}
-          text={
-            'How to eat a lot and not gain weight? I will tell you in this article'
-          }
-        />
+        {blogLoremIpsum.filter(blog => blog.type === 'big').map((blog) => (
+          <BlogBlockBig
+            key={blog.id}
+            text={blog.blogTitle}
+            author={blog.author}
+            date={blog.date}
+            tag={blog.tag}
+            avatarUrl={blog.avatarUrl}
+            backgroundImage={blog.backgroundImage}
+          />
+        ))}
       </Container>
       {/* Other */}
       <Container>
@@ -52,11 +56,13 @@ export const Blog = () => {
         <Box sx={{ display: 'flex', mb: '32px' }}>
           <Box sx={{ mb: '48px' }}>
             <SideMenu buttonText={false} titleText={'Achieves'}>
-              {filteredBlockMenuCategories.map((category) => (
-                <CategoryLink key={category.id} linkUrl={'/404'}>
-                  {category.categoryName}
-                </CategoryLink>
-              ))}
+              {blogMenu
+                .filter((category) => category.menu === 'archieves')
+                .map((category) => (
+                  <CategoryLink disabled key={category.id} linkUrl={'/coming-soon'}>
+                    {category.categoryName}
+                  </CategoryLink>
+                ))}
             </SideMenu>
           </Box>
           <Box
@@ -91,12 +97,17 @@ export const Blog = () => {
         {/* Second Row */}
         <Box sx={{ display: 'flex', mb: '32px' }}>
           <Box sx={{ mb: '48px' }}>
-            <SideMenu buttonText={false} titleText={'Achieves'}>
-              {filteredBlockMenuCategories.map((category) => (
-                <CategoryLink key={category.id} linkUrl={'/404'}>
-                  {category.categoryName}
-                </CategoryLink>
-              ))}
+            <SideMenu buttonText={false} titleText={'Tags'}>
+              {blogMenu
+                .filter((category) => category.menu === 'tags')
+                .map((category) => (
+                  <CategoryLink
+                    key={category.id}
+                    linkUrl={`/tags/${category.categoryName}`}
+                  >
+                    {category.categoryName}
+                  </CategoryLink>
+                ))}
             </SideMenu>
           </Box>
           <Box
@@ -131,12 +142,14 @@ export const Blog = () => {
         {/* Third Row */}
         <Box sx={{ display: 'flex' }}>
           <Box sx={{ mb: '48px' }}>
-            <SideMenu buttonText={false} titleText={'Achieves'}>
-              {filteredBlockMenuCategories.map((category) => (
-                <CategoryLink key={category.id} linkUrl={'/404'}>
-                  {category.categoryName}
-                </CategoryLink>
-              ))}
+            <SideMenu buttonText={false} titleText={'Achieves Old'}>
+              {blogMenu
+                .filter((category) => category.menu === 'archievesold')
+                .map((category) => (
+                  <CategoryLink disabled key={category.id} linkUrl={'/coming-soon'}>
+                    {category.categoryName}
+                  </CategoryLink>
+                ))}
             </SideMenu>
           </Box>
           <Box

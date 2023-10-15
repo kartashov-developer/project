@@ -8,7 +8,7 @@ import TextDate from '../TextDate/TextDate';
 import AvatarText from '../AvatarText/AvatarText';
 import TagBigBlock from '../TagBigBlock/TagBigBlock';
 
-const BoxStyled = styled(Box)(({}) => ({
+const BoxStyled = styled(Box)(({ }) => ({
   display: 'flex',
   flexDirection: 'column',
   gap: 8,
@@ -34,7 +34,7 @@ const StyledHeader = styled(Typography)(({ theme }) => ({
   }
 }));
 
-const BlogBlock = ({ tag, text }) => {
+const BlogBlock = ({ tag, text, author, avatarUrl, backgroundImage, date }) => {
   return (
     <Box
       sx={{
@@ -51,7 +51,8 @@ const BlogBlock = ({ tag, text }) => {
           height: '400px',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundImage: `url("../../../public/static/images/placeholders/RectangleSuperBig.svg")`,
+          backgroundImage: `url(${backgroundImage})`,
+          borderRadius: '12px',
           '&:hover': {
             boxShadow: '5px -4px 24px -5px rgba(34, 60, 80, 0.71)',
             borderRadius: '12px',
@@ -72,14 +73,14 @@ const BlogBlock = ({ tag, text }) => {
             </StyledHeader>
           </Box>
           <AvatarText
-            avatarSrc={'../../../../public/static/images/avatars/avatar1.svg'}
+            avatarSrc={avatarUrl}
             white={true}
-            author={'Hello'}
-            date={'15.05.2012'}
+            author={author}
+            date={date}
           />
         </BoxStyled>
       </Box>
-    </Box>
+    </Box >
   );
 };
 

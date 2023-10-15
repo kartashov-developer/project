@@ -13,24 +13,16 @@ import Footer from './Footer/Footer';
 export default function BaseLayout() {
   return (
     <>
-      {/* Background */}
+      {/* Line for Navbar */}
       <Container
         disableGutters
-        sx={{
-          position: 'absolute',
-          backgroundColor: '#F9F9F9',
-          height: '100%',
-          // width: '100%',
-          zIndex: -1000
-        }}
-      ></Container>
-      {/* Line for Navbar */}
-      <Container disableGutters sx={{ position: 'relative' }}>
+        sx={{ position: 'relative' }}
+      >
         <Line />
       </Container>
       {/* Main Layout */}
       <Container
-        maxWidth='lg'
+        // maxWidth='lg'
         disableGutters
         sx={{
           backgroundColor: '#FFFFFF',
@@ -50,7 +42,7 @@ export default function BaseLayout() {
           <Outlet />
           <Footer />
         </Container>
-      </Container>
+      </Container >
     </>
   );
 }

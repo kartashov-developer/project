@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 
-const SectionHeader = ({ sectionHeader, buttonText }) => {
+const SectionHeader = ({ sectionHeader, buttonText, onClick, link }) => {
   return (
     <>
       <Box
@@ -19,6 +19,7 @@ const SectionHeader = ({ sectionHeader, buttonText }) => {
           endIcon={
             <img src='../../../public/static/images/icons/right-arrow.svg' />
           }
+          onClick={onClick}
         >
           {buttonText}
         </Button>

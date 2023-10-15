@@ -58,6 +58,7 @@ const BlogPosts = () => {
       <SectionHeader
         sectionHeader={'Read our Blog posts'}
         buttonText={'Go to Blog'}
+        onClick={<Link to='/blog' />}
       />
       <WrapperContainer disableGutters>
         <BlogPostContainer disableGutters>

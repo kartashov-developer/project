@@ -31,11 +31,12 @@ const StyledBadge = styled(Typography)(
     font-weight: 600;
     line-height: normal;
     border-radius: 12px;
-    width: 56px;
+    padding: 2px;
+    width: 45px;
     position: absolute;
     z-index: 1000;
-    top: 28px;
-    left: 30px;
+    top: 15px;
+    left: 15px;
   `
 );
 //----------------------------------------------------------------------------
@@ -43,23 +44,25 @@ const CardProduct = ({
   productTitle,
   productDescription,
   productPrice,
-  discount
+  discount,
+  backgroundImage
 }) => {
   return (
     <>
       <CardWrapper>
         {discount ? (
           <Box sx={{ position: 'relative' }}>
-            <StyledBadge>- {discount} %</StyledBadge>
+            <StyledBadge> - {discount} %</StyledBadge>
           </Box>
         ) : null}
         <CardMedia
           component='img'
           height='180px'
           width='269px'
-          image='/static/images/placeholders/Image-light.jpg'
-          alt='Card Content'
-          sx={{ padding: '16px 16px 16px 16px', zIndex: 0 }}
+          sx={{
+            zIndex: 0,
+            backgroundImage: `url(${backgroundImage})`
+          }}
         />
         <CardContent
           sx={{
@@ -80,7 +83,7 @@ const CardProduct = ({
             p: '16px',
             display: 'flex',
             flexDirection: 'row',
-            gap: '55px'
+            gap: '60px'
           }}
         >
           <Typography variant='h4'>{productPrice} USD</Typography>

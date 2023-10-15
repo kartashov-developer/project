@@ -12,7 +12,8 @@ export const footerMenu = [
         linkUrl: '/careers'
       },
       {
-        linkName: 'Press Releases'
+        linkName: 'Blog',
+        linkUrl: '/blog'
       },
       {
         linkName: 'Connections'
